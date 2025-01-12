@@ -1,0 +1,20 @@
+services:
+
+  db:
+    container_name: bizfns_pgsql
+    image: postgres:latest
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: Bizfns
+    volumes:
+      - ./dump-Bizfns.sql:/dump.sql
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080

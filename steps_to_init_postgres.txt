@@ -1,0 +1,9 @@
+Open dump sql file and replace all "English_India.1252" to "en_US.UTF-8"
+Run Docker container
+```
+docker compose up -d
+```
+Open bash inside the container and switch to the PostgreSQL user
+```
+docker exec -it bizfns_pgsql psql -U admin -d Bizfns -f /dump.sql
+```
