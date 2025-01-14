@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width:100%;
+    }
+
+    .details, .items, .totals {
+      width: 50%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .details th, .items th, .totals th, .details td, .items td, .totals td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .details th, .items th, .totals th {
+      background-color: #f2f2f2;
+    }
+
+    .totals td {
+      text-align: right;
+    }
+
+    .details {
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+<h1 class="header">INVOICE</h1>
+
+<div class="container">
+  <table>
+    <tr>
+      <td>
+        <table class="details" style="width:345px;">
+          <tr>
+            <th>Business Name:</th>
+            <td th:text="${customerInvoices[0].businessName != null ? customerInvoices[0].businessName : 'N/A'}">Maroon</td>
+          </tr>
+          <tr>
+            <th>Customer Name:</th>
+            <td th:text="${customerInvoices[0].customerName != null ? customerInvoices[0].customerName : 'N/A'}">Debojyati Deb</td>
+          </tr>
+          <tr>
+            <th>Service Object Names:</th>
+            <td th:text="${customerInvoices[0].ServiceObjectNames != null ? customerInvoices[0].ServiceObjectNames : 'N/A'}">Jay Kumar
+              Kriti Swanth
+              Kendela</td>
+          </tr>
+          <tr>
+            <th>Payment Term:</th>
+            <td th:text="${customerInvoices[0].invoices[0].paymentTerm != null ? customerInvoices[0].invoices[0].paymentTerm : 'N/A'}">On Recipt 30-Day.</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table class="details" style="margin-right:0px; width:345px;">
+          <tr>
+            <th>Invoice Number:</th>
+            <td th:text="${customerInvoices[0].invoices[0].invoiceId != null ? customerInvoices[0].invoices[0].invoiceId : 'N/A'}">InvBznfs0045632</td>
+          </tr>
+          <tr>
+            <th>Invoice Date:</th>
+            <td th:text="${customerInvoices[0].invoices[0].invoiceDate != null ? customerInvoices[0].invoices[0].invoiceDate : 'N/A'}">28.06.2024</td>
+          </tr>
+          <tr>
+            <th>Due Date:</th>
+            <td th:text="${customerInvoices[0].invoices[0].dueDate != null ? customerInvoices[0].invoices[0].dueDate : 'N/A'}">29.06.2024</td>
+          </tr>
+          <tr>
+            <th>Status:</th>
+            <td th:text="${customerInvoices[0].invoices[0].status != null ? customerInvoices[0].invoices[0].status : 'N/A'}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<table class="items" style="width:100%;">
+  <thead>
+  <tr>
+    <th>Category</th>
+    <th>Items</th>
+    <th>QTY</th>
+    <th>Price</th>
+    <th>Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="serviceItem, iterStat : ${customerInvoices[0].invoices[0]['Service Names&Charges']}">
+    <td th:if="${iterStat.first}">Service</td>
+    <td th:unless="${iterStat.first}"></td>
+    <td th:text="${serviceItem.ServiceName != null ? serviceItem.ServiceName : 'N/A'}"></td>
+    <td th:text="${serviceItem.ServiceCount != null ? serviceItem.ServiceCount : 'N/A'}"></td>
+    <td th:text="${serviceItem.ServiceRate != null ? serviceItem.ServiceRate : 'N/A'}"></td>
+    <td th:text="${serviceItem.ServiceCount != null && serviceItem.ServiceRate != null ? serviceItem.ServiceCount * serviceItem.ServiceRate : 'N/A'}"></td>
+  </tr>
+  <tr th:each="materialItem, iterStat : ${customerInvoices[0].invoices[0]['Material Names&Charges']}">
+    <td th:if="${iterStat.first}">Material</td>
+    <td th:unless="${iterStat.first}"></td>
+    <td th:text="${materialItem.MaterialName != null ? materialItem.MaterialName : 'N/A'}"></td>
+    <td th:text="${materialItem.MaterialCount != null ? materialItem.MaterialCount : 'N/A'}"></td>
+    <td th:text="${materialItem.MaterialRate != null ? materialItem.MaterialRate : 'N/A'}"></td>
+    <td th:text="${materialItem.MaterialCount != null && materialItem.MaterialRate != null ? materialItem.MaterialCount * materialItem.MaterialRate : 'N/A'}"></td>
+  </tr>
+  <tr th:each="chargeItem, iterStat : ${customerInvoices[0].invoices[0]['Charges']}">
+    <td th:if="${iterStat.first}">Charges</td>
+    <td th:unless="${iterStat.first}"></td>
+    <td th:text="${chargeItem.ChargeName != null ? chargeItem.ChargeName : 'N/A'}"></td>
+    <td th:text="${chargeItem.ChargeCount != null ? chargeItem.ChargeCount : 'N/A'}"></td>
+    <td th:text="${chargeItem.ChargeAmount != null ? chargeItem.ChargeAmount : 'N/A'}"></td>
+    <td th:text="${chargeItem.ChargeCount != null && chargeItem.ChargeAmount != null ? chargeItem.ChargeCount * chargeItem.ChargeAmount : 'N/A'}"></td>
+  </tr>
+  <tr th:each="chargeItem, iterStat : ${customerInvoices[0].invoices[0]['Discount']}">
+    <td th:if="${iterStat.first}">Discount</td>
+    <td th:unless="${iterStat.first}"></td>
+    <td th:text="${chargeItem.DiscountName != null ? chargeItem.DiscountName : 'N/A'}"></td>
+    <td th:text="${chargeItem.DiscountQuantity != null ? chargeItem.DiscountQuantity : 'N/A'}"></td>
+    <td></td>
+    <td th:text="${customerInvoices[0].invoices[0].TotalDiscountAmount != null ? customerInvoices[0].invoices[0].TotalDiscountAmount : 'N/A'}"></td>
+  </tr>
+  <tr th:each="taxItem, iterStat : ${customerInvoices[0].invoices[0]['Taxes']}">
+    <td th:if="${iterStat.first}">Taxes</td>
+    <td th:unless="${iterStat.first}"></td>
+    <td th:text="${taxItem.TaxName != null && taxItem.TaxRate != null ? taxItem.TaxName + '(' + taxItem.TaxRate + '%)' : 'N/A'}"></td>
+    <td></td>
+    <td></td>
+    <td th:text="${taxItem.TaxCost != null ? taxItem.TaxCost : 'N/A'}"></td>
+  </tr>
+  <tr>
+    <td>Deposit</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td th:text="${customerInvoices[0].invoices[0].TotalDepositAmount != null ? customerInvoices[0].invoices[0].TotalDepositAmount : 'N/A'}"></td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+    <th>Total:</th>
+    <td th:text="${customerInvoices[0].invoices[0].TotalPayableAmount != null ? customerInvoices[0].invoices[0].TotalPayableAmount : 'N/A'}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

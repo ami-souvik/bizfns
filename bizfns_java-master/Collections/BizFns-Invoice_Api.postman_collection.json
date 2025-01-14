@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "663a66fe-c359-442f-8e50-20cc2bfe074c",
+		"name": "BizFns-Invoice_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "createInvoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{BizfnsAuthtoken}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"endDate\": \"2024-05-20\",\r\n        \"jobId\": \"56\",\r\n        \"CustomersList\": [\r\n            {\r\n                \"CUSTOMER_FIRST_NAME\": \"customer1\",\r\n                \"CUSTOMER_LAST_NAME\": \"cust\",\r\n                \"PK_CUSTOMER_ID\": 1,\r\n                \"ServiceEntityList\": [\r\n                    {\r\n                        \"SERVICE_ENTITY_NAME\": \"child1\",\r\n                        \"PK_SERVICE_ENTITY\": 1\r\n                    },\r\n                    {\r\n                        \"SERVICE_ENTITY_NAME\": \"child2\",\r\n                        \"PK_SERVICE_ENTITY\": 4\r\n                    },\r\n                    {\r\n                        \"SERVICE_ENTITY_NAME\": \"child_3\",\r\n                        \"PK_SERVICE_ENTITY\": 5\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"CUSTOMER_FIRST_NAME\": \"customer_2\",\r\n                \"CUSTOMER_LAST_NAME\": \"last\",\r\n                \"PK_CUSTOMER_ID\": 2,\r\n                \"ServiceEntityList\": [\r\n                    {\r\n                        \"SERVICE_ENTITY_NAME\": \"service_entity_1\",\r\n                        \"PK_SERVICE_ENTITY\": 2\r\n                    },\r\n                    {\r\n                        \"SERVICE_ENTITY_NAME\": \"service_entity_02\",\r\n                        \"PK_SERVICE_ENTITY\": 6\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"Material_details\": [],\r\n        \"tax_sum\": \"8.00\",\r\n        \"sub_total\": \"44.00\",\r\n        \"totalworkinghours\": \"4\",\r\n        \"Staffname\": \"ag bs\",\r\n        \"tenantId\": \"agni2803\",\r\n        \"jobnote\": \"Women Day\",\r\n        \"StaffList\": [\r\n            {\r\n                \"fullName\": \"ag bs\",\r\n                \"workingHours\": \"4.0\",\r\n                \"totalwokingcharges\": \"44.0\",\r\n                \"hourlyCharge\": \"11.0\"\r\n            }\r\n        ],\r\n        \"grand_total\": \"52.00\",\r\n        \"startDate\": \"2024-05-20\",\r\n        \"joblocation\": \"KOLKATA\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BizfnsBaseURL}}/api/users/createInvoice"
+			},
+			"response": []
+		},
+		{
+			"name": "SaveEditInvoiceValuesByJobIdAndCustomerIds",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyMzAxMjg0LCJpYXQiOjE3MjIyNTgwODR9.yJ_rv2OyPwe5GeVjKPaDDLUXsPZn_Y8sVkY82LtP-aXNJccFurmjSzVz6jeni-GnFFUr3iVi6jTmbH0TX0FlMQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TenantId\": \"hoxs3359\",\r\n    \"UserId\": \"1111155555\",\r\n    \"JobId\": \"104\",\r\n    \"CustomerIds\": [\r\n        2\r\n    ],\r\n    \"Services\": {\r\n        \"4\": 2,\r\n        \"5\":1\r\n    },\r\n    \"Materials\": {\r\n        \"2\": 1.5,\r\n        \"3\":2.0\r\n    },\r\n    \"LaborCharge\": 100.50,\r\n    \"TripTravelCharge\": 50.25,\r\n    \"SpecialCharges\": {\r\n        \"SpecialChargeName1\": 30.75,\r\n        \"SpecialChargeName2\": 40.50\r\n    },\r\n    \"Discount\": {\r\n        \"DiscountValue\": 10.60,\r\n        \"DiscountMethod\": \"percentage\"\r\n    },\r\n    \"Deposit\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/SaveEditInvoiceValuesByJobIdAndCustomerIds"
+			},
+			"response": []
+		},
+		{
+			"name": "updateEditInvoiceValues",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIxMzI5ODI4LCJpYXQiOjE3MjEyODY2Mjh9.lFrHe7IYCt-RqHVnFGv32eihxwsWvcqhAuGMCN0T-nypRPs_B-YHR1vcyEjzVbmfYLhcqZS1J4JgxFEg1RNGVg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TenantId\": \"hoxs3359\",\r\n    \"UserId\": \"1111155555\",\r\n    \"JobId\": \"99\",\r\n    \"CustomerIds\": [\r\n        2\r\n    ],\r\n    \"Services\": {\r\n        \"4\": 1,\r\n        \"5\": 2\r\n    },\r\n    \"Materials\": {\r\n        \"3\": 2.5,\r\n        \"4\": 3.75 \r\n    },\r\n    \"LaborCharge\": 100.50,\r\n    \"TripTravelCharge\": 50.25,\r\n    \"SpecialCharges\": {\r\n        \"SpecialChargeName1\": 30.75,\r\n        \"SpecialChargeName2\": 40.50\r\n    },\r\n    \"Discount\": {\r\n        \"DiscountValue\": 10.60,\r\n        \"DiscountMethod\": \"percentage\"\r\n    },\r\n    \"Deposit\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateEditInvoiceValues"
+			},
+			"response": []
+		},
+		{
+			"name": "getEditInvoiceValuesByJobIdAndCustomerId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIxMjM5Njk4LCJpYXQiOjE3MjExOTY0OTh9.ofBoSJzR5fdSWbjJQpTwrXiOapZjIrHnJdePz27dfSmfpnqNPulM_NBlcyzUzRVbJsz-k_S4aXu-IABFpG82jw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"TenantId\": \"hoxs3359\",\r\n  \"UserId\": \"1111155555\",\r\n  \"JobId\": \"99\",\r\n  \"CustomerIds\": [1, 2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getEditInvoiceValuesByJobIdAndCustomerId"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateInvoicePdfByCustomers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyMzAxMjg0LCJpYXQiOjE3MjIyNTgwODR9.yJ_rv2OyPwe5GeVjKPaDDLUXsPZn_Y8sVkY82LtP-aXNJccFurmjSzVz6jeni-GnFFUr3iVi6jTmbH0TX0FlMQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"TenantId\": \"hoxs3359\",\r\n  \"UserId\": \"1111155555\",\r\n  \"JobId\": \"104\",\r\n  \"CustomerIds\": [2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/CreateInvoicePdfByCustomers"
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateInvoice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNjk5NjM2Njk3LCJpYXQiOjE2OTk1OTM0OTd9.zDLKhNGmRpiNR6OujzJ1kksHtuRD3tpp8s3M2JY7IR7VqjsjbZWZoGa2SRcWCQKM4HaU9kgDAbGBkX8SNlv-qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BizfnsBaseURL}}/api/users/downloadInvoiceFile/invoice24e8ec6e5-5d18-4fe3-ae80-6bbefef25d38.pdf"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "1c0e69c6-1805-4984-870d-232cdea85649",
+		"name": "Bizfns-History_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "getCustomerServiceHistory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LHNhbG81OTA4IiwiZXhwIjoxNzE2NDAzMjExLCJpYXQiOjE3MTYzNjAwMTF9.lHe7XJgEd1geqjzDIcMB7IBU0BWbgMoQdxkLenekxeNxEWOOjBEqM3fFy9DKb4BO76-Jtj3M4kAG_AJftPVk9A"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\":\"salo5908\",\r\n    \"customerIdList\": [\r\n      {\r\n        \"customerId\": 12\r\n      }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getCustomerServiceHistory"
+			},
+			"response": []
+		},
+		{
+			"name": "customerHistoryRecordList",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyOTg5MzcwLCJpYXQiOjE2OTI5NDYxNzB9.9isYjfusHBYUX20XDpVlUuyTfGUZJoSGhqBZ77rZSs1pH4dwNu4pR5WUKsdOPwHPmQR3sRy6r0ebA18i1Yok9w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"\",\r\n  \"tenantId\":\"ac5g5624\",\r\n  \"fromDate\":\"2023-08-21\",\r\n  \"toDate\":\"2023-08-21\",\r\n  \"customerId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/customerHistoryRecordList"
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerHistory",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MDkxOTgxMTIxIiwiZXhwIjoxNjkyOTA1NTcyLCJpYXQiOjE2OTI4NjIzNzJ9.OIHSj2ZpQZBIG0tJOjvGr5pWLgm9Cs0lK4EktRRF519VrLAw8b5CxCGTzF_asB72YpT32X6r85lvRS_Sg0lgjA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8521479630\",\r\n  \"tenantId\":\"maxm8203\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://182.156.196.67:8085/api/users/fetchStaffList"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New PDF</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      table {
+        /* width: 700px; */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      td,
+      caption {
+        padding: 8px;
+      }
+
+      th {
+        padding: 10px;
+        background-color: lightblue;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    </style>
+</head>
+<body>
+<table style="border: none">
+    <tr>
+        <td style="border: none; padding-bottom: 0">
+            <table style="width: 100%; vertical-align: middle; margin: auto">
+                <tr>
+                    <td style="border-bottom: none">
+                        <table style="margin: auto; border: none">
+                            <tr>
+                                <td style="
+                        border: none;
+                        font-family: Arial, Helvetica, sans-serif;
+
+                        text-align: left;
+                        font-weight: bold;
+                        font-size: 15px;
+                        padding-left: 0;
+                      ">
+                                    <p style="
+                          font-size: 22px;
+                          line-height: 1.4;
+                          color: #202020;
+                          font-weight: 600;
+                        "> Invoice </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="border: none; padding-bottom: 0">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" style="width: 100%; vertical-align: middle; margin: auto">
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Order ID: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+                  "th:text="${invoiceId}">  </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Job ID: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+                  "th:text="${jobid}">  </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> jobNote: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+                  " th:text="${scheduleName}"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Customer Name: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+
+                  " th:text="${CustomerName}">  </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Service Entity Name: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+
+                  " th:text="${serviceEntity}">  </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Customer Address: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+                  " th:text="${address}"> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Service Time: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+                  "th:text="${endDate}"> </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                  "> Staff's name: </p>
+                    </td>
+                    <td style="vertical-align: top">
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #949494;
+                    font-weight: 400;
+                    margin: 0;
+                  " th:text="${staffName}">  </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+            <table id ="MaterialsDetails"border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" style="
+              width: 100%;
+              vertical-align: middle;
+              margin: auto;
+              text-align: center;
+
+            ">
+                <tr>
+
+                    <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: left;
+                ">
+                        <b>Material Name</b>
+                    </th>
+                    <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: center;
+                ">
+                        <b>Quantity </b>
+                    </th>
+                    <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: right;
+                ">
+                        <b>Unit Price </b>
+                    </th>
+                    <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: right;
+                ">
+                        <b>Total Price </b>
+                    </th>
+                </tr>
+
+                <tr th:each="material : ${serviceName}">
+                    <td>
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: left;
+                  " th:text="${material.MaterialName}">  </p>
+                    </td>
+                    <td>
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: center;
+                  " th:text="${material.MaterialQuantity}">  </p>
+                    </td>
+                    <td>
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  " >
+                            <span class="rupee-sign">&#36</span>
+                            <span class="order-value" th:text="${material.MaterialPrice}"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  ">
+                            <span class="rupee-sign">&#36</span>
+                            <span class="order-value"  th:text="${material.MaterialPrice}"></span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+<table  id ="staff table"border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" style="
+              width: 100%;
+              vertical-align: middle;
+              margin: auto;
+              text-align: center;
+
+            ">
+    <tr>
+        <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: left;
+                ">
+            <b>Staff Details</b>
+        </th>
+        <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: center;
+                ">
+            <b>Working Hours </b>
+        </th>
+        <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: right;
+                ">
+            <b> Hourly Rate </b>
+        </th>
+        <th style="
+                  background: #464646;
+                  color: #fff;
+                  font-size: 16px;
+                  text-align: right;
+                ">
+            <b>Total </b>
+        </th>
+    </tr>
+
+    <tr th:each="staffs : ${staffDetails}">
+        <td>
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: left;
+                  " th:text="${staffs.fullName}"></p>
+        </td>
+        <td>
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: center;
+                  " > </p>
+            <span class="order-value"  th:text="${staffs.workingHours}"></span>
+        </td>
+        <td>
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  " >
+                <span class="rupee-sign">&#36</span>
+                <span class="order-value" th:text="${staffs.hourlyCharge}"></span>
+            </p>
+        </td>
+        <td>
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  " >
+                <span class="rupee-sign">&#36</span>
+                <span class="order-value" th:text="${staffs.totalwokingcharges}"></span>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="border-bottom: 1px solid #202020; padding: 0px"></td>
+        <td style="border-bottom: 1px solid #202020; padding: 0px"></td>
+        <td style="border-bottom: 1px solid #202020; padding: 0px"></td>
+        <td style="border-bottom: 1px solid #202020"></td>
+    </tr>
+
+    <tr>
+        <td colspan="3">
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  "> Sub total </p>
+        </td>
+        <td>
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  ">
+                <span class="rupee-sign">&#36</span>
+                <span class="order-value" th:text="${sub_total}"></span>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  "> Taxes </p>
+        </td>
+        <td>
+            <p style="
+                    line-height: 1.4;
+
+                    font-size: 14px;
+                    color: #2b2b2b;
+                    font-weight: 500;
+                    margin: 0;
+                    text-align: right;
+                  ">
+                <span class="rupee-sign">&#36</span>
+                <span class="order-value" th:text="${total_Tax}" ></span>
+            </p>
+        </td>
+    </tr>
+
+    <tfoot>
+    <tr>
+        <td colspan="3" style="
+                    background: #464646;
+                    color: #fff;
+                    font-size: 16px;
+                    text-align: right;
+                    font-weight: 600;
+                  "> Total </td>
+        <td style="
+                    background: #464646;
+                    color: #fff;
+                    font-size: 16px;
+                    text-align: right;
+                    font-weight: 600;
+                  ">
+            <span class="rupee-sign">&#36</span>
+            <span class="total-order-value" th:text="${grand_total}"></span>
+        </td>
+    </tr>
+    </tfoot>
+</table>
+
+
+
+
+
+    <tr>
+        <td style="border: none; padding-bottom: 0">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" style="
+              width: 100%;
+              vertical-align: middle;
+              margin: auto;
+              text-align: center;
+            ">
+                <tr>
+                    <td
+                            colspan="10"
+                            style="
+                  font-size: 18px;
+                  line-height: 1.4;
+                  text-align: left;
+                  color: #202020;
+                  font-weight: 600;
+                "
+                    >
+                        Terms & Conditions
+                        <a
+                                href="https://www.lorem.com/policies/terms-of-service/"
+                                class=""
+                        >https://www.lorem.com/policies/terms-of-service/</a
+                        >
+                        :
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
+                    font-size: 12px;
+                    line-height: 1.4;
+                    text-align: left;
+                    color: #202020;
+                    font-weight: 500;
+                    display: flex;
+                  ">
+                            <span style="display: inline-block; vertical-align: top">1.</span>
+                            <span style="display: inline-block">Pay at Service </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
+                    font-size: 12px;
+                    line-height: 1.4;
+                    text-align: left;
+                    color: #202020;
+                    font-weight: 500;
+                    display: flex;
+                  ">
+                            <span style="display: inline-block; vertical-align: top">2.</span>
+                            <span style="display: inline-block">Pay at Receipt of Invoice </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
+                    font-size: 12px;
+                    line-height: 1.4;
+                    text-align: left;
+                    color: #202020;
+                    font-weight: 500;
+                    display: flex;
+                  ">
+                            <span style="display: inline-block; vertical-align: top">3.</span>
+                            <span style="display: inline-block">Pay in 15 days</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
+                    font-size: 12px;
+                    line-height: 1.4;
+                    text-align: left;
+                    color: #202020;
+                    font-weight: 500;
+                    display: flex;
+                  ">
+                            <span style="display: inline-block; vertical-align: top">4.</span>
+                            <span style="display: inline-block">Pay in 30 days</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
+                    font-size: 12px;
+                    line-height: 1.4;
+                    text-align: left;
+                    color: #202020;
+                    font-weight: 500;
+                    display: flex;
+                  ">
+                            <span style="display: inline-block; vertical-align: top">5.</span>
+                            <span style="display: inline-block">Pay in 90 days </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="
+                    font-size: 12px;
+                    line-height: 1.4;
+                    text-align: left;
+                    color: #202020;
+                    font-weight: 500;
+                    display: flex;
+                  ">
+                            <span style="display: inline-block; vertical-align: top">6.</span>
+                            <span style="display: inline-block">Pay on Regular Recurrence (15 / 30 / 90 days, as set) </span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="border: none; padding-bottom: 0">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" style="
+              width: 100%;
+              vertical-align: middle;
+              margin: auto;
+              text-align: center;
+            ">
+                <tr>
+                    <td style="text-align: left">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 5px;
+                    line-height: 1.4;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                  ">
+                            <b>BIZFNS</b>
+                        </p>
+                        <p style="margin-bottom: 12px; line-height: 1.4; font-size: 12px"> Lic. No. 12819013000187 </p>
+                    </td>
+                    <td style="text-align: left">
+                        <p style="
+                    margin-top: 12px;
+                    margin-bottom: 5px;
+                    line-height: 1.4;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                  ">
+                            <b>lorem</b>
+                        </p>
+                        <p style="margin-bottom: 12px; line-height: 1.4; font-size: 12px"> Lic. No. 12819013000187 </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "d9f09012-88d8-44ee-993c-8d128bb12fa8",
+		"name": "Bizfns-profile_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "getProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTc3Nzc3LGh1emE2MTQ3IiwiZXhwIjoxNzEyMTY0NjMxLCJpYXQiOjE3MTIxMjE0MzF9.5qQvj-CH3839JxfoU5qYroLgW9bITOAY-OyMSpEc9Uh3Gd0PZKOsyHrtJNgpSO4i0mRxNkrPV7pFga7Qwngr7g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"ac5g5624\",\r\n    \"userId\": \"6564646464\",\r\n    \"businessEmail\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/profile/getProfile"
+			},
+			"response": []
+		}
+	]
+}

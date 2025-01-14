@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "c69d04f4-9f8b-41bf-a3dc-071e57a1c65f",
+		"name": "Bizfns-Material_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "addMaterial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzE4Mzg2NTI4LCJpYXQiOjE3MTgzNDMzMjh9.c3HhVjJICwQsnWxW2TdWn8oWkW1FxdNNaC4kKKTQ_REMTFI9CP3qKqOl5QbgGSHAUsl48FV4PXNcZItvoKrBzQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk0MDI0NjU2LCJpYXQiOjE2OTM5ODE0NTZ9.7VIUHfPwEn7nCWz7i-MyCYtJtwf-mB-TAdfkXomWxGUbCExAstBlUbXrU5ydc2AimT-myQpV01bFgLdHPkJYbw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\": \"\",\r\n  \"deviceType\": \"\",\r\n  \"appVersion\": \"\",\r\n  \"userId\": \"1111155555\",\r\n  \"tenantId\": \"hoxs3359\",\r\n  \"materialData\": {\r\n    \"categoryId\": \"1\",\r\n    \"subcategoryId\": \"1\",\r\n    \"materialName\": \"M'kj\",\r\n    \"materialRate\": \"10\",\r\n    \"materialType\": \"2\",\r\n    \"materialRateUnitId\":\"1\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addMaterial"
+			},
+			"response": []
+		},
+		{
+			"name": "materialList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk0MTk4MDc3LCJpYXQiOjE2OTQxNTQ4Nzd9.WlQNakhj-U_EK58hSZtzggW6RbVa_lVRAWBVNQYrIFv9OPROLMe4MXBeCPI8SVCQOLHd7J9endgpBZ-q5f0SXQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"\",\r\n  \"tenantId\":\"hoxs3359\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/materialList"
+			},
+			"response": []
+		},
+		{
+			"name": "materialCategoryData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3ODQ1NjYyMjk5IiwiZXhwIjoxNzEwNDM1MzkzLCJpYXQiOjE3MTAzOTIxOTN9.oa-jZJ26nU9KjotAiwL5x-q_lnQtwKKek6txC2dsZoQMk3klsU05KmeYlZL8tZfz4HbQ91yH58pqPSgm3rHVDg"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzMzM0Njc0LCJpYXQiOjE2OTMyOTE0NzR9.hMwCWpezII8fCU3Klp8MDXV9c2qBr54Sif95mhYIBEMAz4LP9g1BS-A4o1DDEYmDkmfzgPKS5SMyiuy0kzvrfw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"7845662299\",\r\n  \"tenantId\":\"agni2803\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://182.156.196.67:8085/api/users/materialCategoryData",
+				"description": "For get category and subcategory as per the category mapping"
+			},
+			"response": []
+		},
+		{
+			"name": "getMaterialUnit",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk0NDU5Mzc0LCJpYXQiOjE2OTQ0MTYxNzR9.hGrnTEFM43U3xKc0WiV30_aYrdVbuw--8OLnmqIpVWbjHmD7xGIs_3wTy3imvYocNSmnBPR9mOSXjmzOjvalXg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"category_id\" : \"1\",\r\n  \"tenantId\":\"ac5g5624\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/getMaterialUnit"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMaterial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"materialId\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/deleteMaterial"
+			},
+			"response": []
+		},
+		{
+			"name": "getMaterialDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"materialId\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getMaterialDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "updateMaterialDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"materialId\": \"2\",\r\n    \"categoryId\": \"\",\r\n    \"subcategoryId\": \"\",\r\n    \"materialName\": \"Hair clip\",\r\n    \"materialRate\": \"30\",\r\n    \"materialType\": \"Plastic\",\r\n    \"materialRateUnitId\": \"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateMaterialDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "addMaterialCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNzIxMDc5LCJpYXQiOjE3MjA2Nzc4Nzl9.fzY3yCoo6ILoAOI4fZ3w1SmiSrU28AxdHTLvFdSY-W14HQkczZkfOmEqGGH6S2LfnCHpjf6MoqVk_aKXnNxO8g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"categoryName\":\"Software\",\r\n    \"parentCategoryId\":0\r\n}    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addMaterialCategory"
+			},
+			"response": []
+		},
+		{
+			"name": "addMaterialSubCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNzIxMDc5LCJpYXQiOjE3MjA2Nzc4Nzl9.fzY3yCoo6ILoAOI4fZ3w1SmiSrU28AxdHTLvFdSY-W14HQkczZkfOmEqGGH6S2LfnCHpjf6MoqVk_aKXnNxO8g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"categoryId\": \"1\",\r\n    \"subcategoryName\": \"Lock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addMaterialSubCategory"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategoryAndSubcategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNzIxMDc5LCJpYXQiOjE3MjA2Nzc4Nzl9.fzY3yCoo6ILoAOI4fZ3w1SmiSrU28AxdHTLvFdSY-W14HQkczZkfOmEqGGH6S2LfnCHpjf6MoqVk_aKXnNxO8g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"categoryId\": \"1\",\r\n    \"subcategoryId\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/deleteCategoryAndSubcategory"
+			},
+			"response": []
+		},
+		{
+			"name": "getActiveInactiveStatusForMaterial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"materialId\": \"2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getActiveInactiveStatusForMaterial"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateActiveInactiveStatusForMaterial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"materialId\": \"2\",\r\n    \"status\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/UpdateActiveInactiveStatusForMaterial"
+			},
+			"response": []
+		}
+	]
+}

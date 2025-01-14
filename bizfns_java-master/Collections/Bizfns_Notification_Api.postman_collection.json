@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "1610cc51-7f18-4897-b12a-6fdf14585cb6",
+		"name": "Bizfns_Notification_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "getNotification",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGF0aGwyODI0IiwiZXhwIjoxNzE1ODgwNTA0LCJpYXQiOjE3MTU4MzczMDR9.KzTmrUCXdJKqhV2nkmBLIz_Pit1NSTStL-JLYJq3CwxU0Osa9XvW1NyR0ssmlc2Zvr6l3p7X7w1eyZTKDxAjcQ"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "page",
+						"value": "1",
+						"disabled": true
+					},
+					{
+						"key": "size",
+						"value": "3",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/users/getNotification?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"getNotification"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readAllNotification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGF0aGwyODI0IiwiZXhwIjoxNzE1ODgwNTA0LCJpYXQiOjE3MTU4MzczMDR9.KzTmrUCXdJKqhV2nkmBLIz_Pit1NSTStL-JLYJq3CwxU0Osa9XvW1NyR0ssmlc2Zvr6l3p7X7w1eyZTKDxAjcQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NOTIFICATION_IDS\":\"321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/readAllNotification"
+			},
+			"response": []
+		}
+	]
+}

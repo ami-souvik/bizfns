@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "90c37df0-1a5d-45b7-998f-f25a602fe06f",
+		"name": "Bizfns-Utilities_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "getAllIntervalData",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNjk3MTQ4Nzg4LCJpYXQiOjE2OTcxMDU1ODh9.g-4iTRQkMwAyJTc9DtF5E9GEXv4xuzk_Aj0xSEpn0qaTMjf5WP_MmcBLsoVbdnyA2bVTBVSYpyq7p6eO0X76Fg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"810\",\r\n    \"tenantId\": \"ac5g5624\",\r\n    \"deviceId\": \"d6f7ac97c61b2b62\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"start_time\": \" 12:39\",\r\n    \"end_time\": \"21:39\",\r\n    \"interval\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getTimeInterval"
+			},
+			"response": []
+		},
+		{
+			"name": "getJobPrice",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNjk5NjM2Njk3LCJpYXQiOjE2OTk1OTM0OTd9.zDLKhNGmRpiNR6OujzJ1kksHtuRD3tpp8s3M2JY7IR7VqjsjbZWZoGa2SRcWCQKM4HaU9kgDAbGBkX8SNlv-qg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n    \r\n    \"jobid\": \"110\",\r\n    \"tenantId\":\"ac5g5624\"\r\n   \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getJobPrice"
+			},
+			"response": []
+		},
+		{
+			"name": "forgotBusinessId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MDkxOTgxMTA3LGhkaGMzNjIzc3QiLCJleHAiOjE2OTIwMzcxNTQsImlhdCI6MTY5MTk5Mzk1NH0.0Z1iU3kMHrNKkfHaJwTDwJkJ8D-2mWmbRhbaXjJzqcsp78C-OIuQ5NHx4PXsy9jrvY67hXH5ZEffL2X-csr1dQ",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111188888\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/forgotBusinessId"
+			},
+			"response": []
+		},
+		{
+			"name": "jobDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1IiwiZXhwIjoxNzEwNjk1MzI4LCJpYXQiOjE3MTA2NTIxMjh9.bB5jMxwLytkvgjdbbO03wbbCWhVdpAyBlMm4Z1A_A_8CUcGCaKYsoHvt5a4EEU_bHFwexmd8cUVURHzeB25Ibw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyOTAzNDkyLCJpYXQiOjE2OTI4NjAyOTJ9.ek4YDiLk884sGpFpTG3hyJ96e3S54xeOqehz51Qd8xcD6DTlC6-K5U6SgnUkUiybs3MtxeDdIaDwkAzytFN2ew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"9876543215\",\r\n  \"tenantId\":\"clea1206\",\r\n  \"jobId\":\"141\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://182.156.196.67:8085/jobDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "addWorkingHours",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzE4NDEwNzQ3LCJpYXQiOjE3MTgzNjc1NDd9.i8hcgxY_89r9BB5rtWyo_XbDxM3w_XYpPXqpzBWmq5atJ8lDAEZVyj6KmQGe36ZawXawhq5A6jg8rC6yk2jIdw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk1NDAzNjMwLCJpYXQiOjE2OTUzNjA0MzB9.Gxx9ISZnSj7ry3hWVPdCc8W0G6W2DxsweQTL3xMQ5al55mLK2sBQv-f1E_7wlJTcs80QkKiZIR1fa5VFgMCzQA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\n\t\"deviceType\": \"IOS\",\n\t\"appVersion\": \"1.0.0\",\n\t\"userId\": \"1111155555\",\n\t\"tenantId\": \"hoxs3359\",\n\t\"start_time\": \"00\",\n\t\"end_time\": \"24\",\n    \"fromDate\" : \"2024-09-25\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addWorkingHours"
+			},
+			"response": []
+		},
+		{
+			"name": "getClientList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1LGNsZWExMjA2IiwiZXhwIjoxNzExOTkyMjI3LCJpYXQiOjE3MTE5NDkwMjd9.ItCaRNj-Edbpo-6fgX8Tq0xi8ZAiDMc5MLybt8ykloG_Dnb6jcdFgBXqA_wNQGc7xqgIj9GgCvVkWJn1yXIXgw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/clientList"
+			},
+			"response": []
+		},
+		{
+			"name": "phoneNoRegCheck",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phoneNumber\": \"0000055555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/phoneNoRegCheck"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBusinessMobileNo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGEzY2E2NjY4IiwiZXhwIjoxNzEyMDAyNzcyLCJpYXQiOjE3MTE5NTk1NzJ9.eeRfZBFXx2GvWTn1L03jQTKjdSRJ0J502xS8jfkJIrPi1K3cRRChNYLW3rc36dl2zzY2rX72u_c1KrtJA2VvNw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTQ3ODkzMjE2IiwiZXhwIjoxNjkxMTczODc0LCJpYXQiOjE2OTExMzA2NzR9.HR2s2SUK6CnnHdI-ttNiQB8Id5qWXMFGvO_a0tZzK_kZZkFCQRuROXFZdRZqtgKro2O1-OOj04B--DU8-p3IdA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"2547893216\",\r\n  \"companyId\": \"111\",\r\n  \"currentMobileNo\": \"1111155555\",\r\n  \"newMobileNo\": \"2547893217\",\r\n  \"deviceId\": \"d8204226d6e8be60\",\r\n  \"deviceType\": \"ANDROID\",\r\n  \"appVersion\": \"1.0.0\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateBusinessMobileNo"
+			},
+			"response": []
+		},
+		{
+			"name": "otpUpdateBusinessEmail",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzODUwMTUyLCJpYXQiOjE2OTM4MDY5NTJ9.fkHLA9cSiF1eqE5kqlLlK6VEBzAfaGtjyHsVAweF1ii01s5lsycegYFp4D9-RzZi7_YSyhxAFl540psANS2iCw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8547693215\",\r\n  \"companyId\":\"179\",\r\n  \"currentEmail\":\"\",\r\n  \"newEmail\":\"\",\r\n  \"tenantId\":\"saya4702\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/otpUpdateBusinessEmail"
+			},
+			"response": []
+		},
+		{
+			"name": "testErrorLog",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzMzM0Njc0LCJpYXQiOjE2OTMyOTE0NzR9.hMwCWpezII8fCU3Klp8MDXV9c2qBr54Sif95mhYIBEMAz4LP9g1BS-A4o1DDEYmDkmfzgPKS5SMyiuy0kzvrfw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8910569212\",\r\n  \"tenantId\":\"ac5g5624\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/testErrorLog"
+			},
+			"response": []
+		},
+		{
+			"name": "verifySecurityQuestion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1LGNsZWExMjA2IiwiZXhwIjoxNzEyMDc4MzI5LCJpYXQiOjE3MTIwMzUxMjl9.FWw0xwiMaNp0HLkqbAKQZDXsUBXyGrTQEiovy54PgvCG0qeq4HEyVBxE7g65OUD6FUWo_j8TlNssmTPdhk2fpw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTQ3ODkzMjE2IiwiZXhwIjoxNjkxMTczODc0LCJpYXQiOjE2OTExMzA2NzR9.HR2s2SUK6CnnHdI-ttNiQB8Id5qWXMFGvO_a0tZzK_kZZkFCQRuROXFZdRZqtgKro2O1-OOj04B--DU8-p3IdA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"1\",\r\n  \"deviceType\":\"11\",\r\n  \"appVersion\":\"111\",\r\n  \"userId\":\"1111155555\",\r\n  \"tenantId\":\"a1ca1165\",\r\n  \"sequrityQuestions\": [\r\n        {\r\n            \"answeer\": \"Kolkata\",\r\n            \"PK_QUESTION_ID\": 1,\r\n            \"QUESTION\": \"In what city were you born?\"\r\n        },\r\n        {\r\n            \"answeer\": \"Ns160\",\r\n            \"PK_QUESTION_ID\": 2,\r\n            \"QUESTION\": \"What was the make and model of your very first car?\"\r\n        },\r\n        {\r\n            \"answeer\": \"Sonu\",\r\n            \"PK_QUESTION_ID\": 3,\r\n            \"QUESTION\": \"What is the name of your best childhood friend?\"\r\n        },\r\n        {\r\n            \"PK_QUESTION_ID\": 4,\r\n            \"answeer\": \"Inception\",\r\n            \"QUESTION\": \"What is your favorite movie?\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/verifySecurityQuestion"
+			},
+			"response": []
+		},
+		{
+			"name": "saveSecurityQuestion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1LGNsZWExMjA2IiwiZXhwIjoxNzExOTkyMjI3LCJpYXQiOjE3MTE5NDkwMjd9.ItCaRNj-Edbpo-6fgX8Tq0xi8ZAiDMc5MLybt8ykloG_Dnb6jcdFgBXqA_wNQGc7xqgIj9GgCvVkWJn1yXIXgw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTQ3ODkzMjE2IiwiZXhwIjoxNjkxMTczODc0LCJpYXQiOjE2OTExMzA2NzR9.HR2s2SUK6CnnHdI-ttNiQB8Id5qWXMFGvO_a0tZzK_kZZkFCQRuROXFZdRZqtgKro2O1-OOj04B--DU8-p3IdA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"1\",\r\n  \"deviceType\":\"11\",\r\n  \"appVersion\":\"111\",\r\n  \"userId\":\"1111155555\",\r\n  \"tenantId\":\"a3ca6668\",\r\n  \"sequrityQuestions\":[\r\n        {\r\n            \"answeer\": \"Kolkata\",\r\n            \"PK_QUESTION_ID\": 1,\r\n            \"QUESTION\": \"In what city were you born?\"\r\n        },\r\n        {\r\n            \"answeer\": \"nS160\",\r\n            \"PK_QUESTION_ID\": 2,\r\n            \"QUESTION\": \"What was the make and model of your very first car?\"\r\n        },\r\n        {\r\n            \"answeer\": \"Sonu\",\r\n            \"PK_QUESTION_ID\": 3,\r\n            \"QUESTION\": \"What is the name of your best childhood friend?\"\r\n        },\r\n        {\r\n            \"answeer\": \"Inception\",\r\n            \"PK_QUESTION_ID\": 4,\r\n            \"QUESTION\": \"What is your favorite movie?\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/saveSecurityQuestion"
+			},
+			"response": []
+		},
+		{
+			"name": "getSecurityQuestion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1LGNsZWExMjA2IiwiZXhwIjoxNzEyMDc4MzI5LCJpYXQiOjE3MTIwMzUxMjl9.FWw0xwiMaNp0HLkqbAKQZDXsUBXyGrTQEiovy54PgvCG0qeq4HEyVBxE7g65OUD6FUWo_j8TlNssmTPdhk2fpw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTQ3ODkzMjE2IiwiZXhwIjoxNjkxMTczODc0LCJpYXQiOjE2OTExMzA2NzR9.HR2s2SUK6CnnHdI-ttNiQB8Id5qWXMFGvO_a0tZzK_kZZkFCQRuROXFZdRZqtgKro2O1-OOj04B--DU8-p3IdA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111155555\",\r\n   \"tenantId\":\"a1ca1165\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getSecurityQuestion"
+			},
+			"response": []
+		},
+		{
+			"name": "phoneNoDuplicateBusinessCheck",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg5LHNhbG81OTA4IiwiZXhwIjoxNzE2NDg4MDk1LCJpYXQiOjE3MTY0NDQ4OTV9.qagzvzttzP2NHNYAthFth6_ffZwOOi7lJyG4mks4ldkSHQk851LpSLs6XHEwrMRoJ1S4ORzZEU6nuF22HNvgBQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"businessName\": \"Naruto\",\r\n  \"phoneNumber\": \"7363807986\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/phoneNoDuplicateBusinessCheck"
+			},
+			"response": []
+		},
+		{
+			"name": "saveTimeInterval",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzE4NDEwNzQ3LCJpYXQiOjE3MTgzNjc1NDd9.i8hcgxY_89r9BB5rtWyo_XbDxM3w_XYpPXqpzBWmq5atJ8lDAEZVyj6KmQGe36ZawXawhq5A6jg8rC6yk2jIdw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1111155555\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"fromDate\": \"2024-06-26\",\r\n    \"interval\": \"\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/saveTimeInterval"
+			},
+			"response": []
+		},
+		{
+			"name": "getTimeInterval",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg5LHNhbG81OTA4IiwiZXhwIjoxNzE2NDg4MDk1LCJpYXQiOjE3MTY0NDQ4OTV9.qagzvzttzP2NHNYAthFth6_ffZwOOi7lJyG4mks4ldkSHQk851LpSLs6XHEwrMRoJ1S4ORzZEU6nuF22HNvgBQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"salo5908\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getTimeInterval"
+			},
+			"response": []
+		},
+		{
+			"name": "saveMaxJobTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzE4MDQzMzIzLCJpYXQiOjE3MTgwMDAxMjN9.CTLCAAxiu8SC0grOtXIUZ7pFg1CpAtW8ImwI06XjvSKxl-vzYsu1Rz3IHM8bk8OuBu8mk0n1FkQB0xycTYW5gQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"fromDate\": \"2024-06-26\",\r\n    \"maximumTask\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/saveMaxJobTask"
+			},
+			"response": []
+		},
+		{
+			"name": "getTimeInterval",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzE3NzgyNTM3LCJpYXQiOjE3MTc3MzkzMzd9.ZzYGGvQ2_VTwvZgCkaJCUsUxn1M2RjJn-5iv6OHzPzhyabG24OH8cBddnUMEq8sk4V4pBLOSpTk-pmlIVQcbOg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\":\"hoxs3359\",\r\n    \"userId\": \"2555554885\",\r\n    \"fromDate\" : \"2025-04-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getTimeInterval"
+			},
+			"response": []
+		},
+		{
+			"name": "getMaxJobTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzE3Nzg0MDA2LCJpYXQiOjE3MTc3NDA4MDZ9.Q41RJwcZrqJ6P-BG9kvObkYYaxsTXbBhdNblprekVO-YnqSqAHvgZ03_yBYNvt5pcz5MbudohoMqQYmizwd3Xw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8085/api/users/getMaxJobTask"
+			},
+			"response": []
+		},
+		{
+			"name": "save_user_priviledges",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzIyNjE4NjEyLCJpYXQiOjE3MjI1NzU0MTJ9.Rw52CtF6PU50AMS976HyRcuPHlEVjiRu2LfpsYjjTaX8iO82xoGHa4zc135v_dpsfyrkz3dzFBF2eEbxNj3CUA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"userType\": \"Staff\",\r\n    \"priviledgeAssigned\": \"14\",\r\n    \"phoneNumber\": \"2555554885\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/save_user_priviledges"
+			},
+			"response": []
+		},
+		{
+			"name": "get_assigned_priviledges",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzE5NDM5OTc2LCJpYXQiOjE3MTkzOTY3NzZ9.KtImjcOBZGlXanTYhrrZXdWTibtSWrQ7l4YZOX1UXRIZUzFHYFRN5b0nt0wugJDsfuG0Zhec_Nc9PjD9alhWuQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"phoneNumber\": \"2555554885\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/get_assigned_priviledges"
+			},
+			"response": []
+		}
+	]
+}

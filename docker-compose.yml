@@ -1,5 +1,8 @@
-services:
+networks:
+  bizfns-network:
+    driver: bridge
 
+services:
   db:
     container_name: bizfns_pgsql
     image: postgres:latest
@@ -12,9 +15,24 @@ services:
       POSTGRES_DB: Bizfns
     volumes:
       - ./dump-Bizfns.sql:/dump.sql
+      - ./dump-Bizfns.sql:/docker-entrypoint-initdb.d/dump.sql
+    networks:
+      - bizfns-network
 
   adminer:
     image: adminer
     restart: unless-stopped
     ports:
       - 8080:8080
+    networks:
+      - bizfns-network
+
+  app:
+    depends_on:
+      - db
+    container_name: bizfns_app
+    build: bizfns_java-master/
+    ports:
+      - 8085:8085
+    networks:
+      - bizfns-network

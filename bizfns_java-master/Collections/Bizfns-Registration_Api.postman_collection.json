@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b5d75fa4-5978-4496-9dfd-fb7b27765168",
+		"name": "Bizfns-Registration_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "companyRegistration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGFzdGg0MjYxIiwiZXhwIjoxNzE1ODg0NjI0LCJpYXQiOjE3MTU4NDE0MjR9.lPogu2yCWP4PEwelhQRk3rEGbzXoQBX8EUtVRTFLYV9d2kDrNjd5EGJ2InXHoAa1ARQ7rqqLxIgFar6AVmm2Bw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZmRAZ21haWwuY29tIiwiZXhwIjoxNjg5MzMwMzQwLCJpYXQiOjE2ODkzMTIzNDB9.0cgMYzirraStEbwV5zVxqIl-8eaNm9HRN19AtR91cVwgtd103zSkqjSOchxwwUPgRSBeTIoCe-EdbHWVT0smNA",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"deviceId\": \"d8204226d6e8be60\",\r\n  \"deviceType\": \"ANDROID\",\r\n  \"appVersion\": \"1.0.0\",\r\n  \"planId\": \"1\",\r\n  \"businessName\": \"Mickey's\",\r\n  \"businessType\": \"4\",\r\n  \"businessCategory\": \"2\",\r\n  \"phoneNumber\": \"2\",\r\n  \"businessEmail\": \"abcfg@gmail.com\",\r\n  \"password\": \"Abcd@12367\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/companyRegistration"
+			},
+			"response": []
+		},
+		{
+			"name": "getRegisterBusinessName",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNzAwMjQ5NDIwLCJpYXQiOjE3MDAyMDYyMjB9.80qbKC_JP6wKf_vpac-IRfxuoYcmyp4QodsRclfK5sWdT57Y2BaR-fthYzbGnKZGteQCHmOR72JzHqf2B-2zkw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\r\n    \"deviceType\": \"IOS\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"userId\": \"8910569212\",\r\n    \"tenantId\": \"ac5g5624\",\r\n     \"startDate\": \"2023-11-05\",\r\n      \"startTime\": \"14:00\",\r\n        \"endDate\": \"2023-11-05\",\r\n        \"endTime\": \"18:00\",\r\n       \r\n        \"DurationOfrecurr\": \"0\",\r\n        \"Numberofrecurr\": \"2\",\r\n        \"recurrType\": \"year\",\r\n        \"weekNumber\": \"1\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getRegisterBusinessName"
+			},
+			"response": []
+		},
+		{
+			"name": "getRegisteredCompany",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNjk3NDc2NTg4LCJpYXQiOjE2OTc0MzMzODh9.pKMMBzAHv8E9WTCL4d39PxzujTkSKIdExNhs3D2YcH3dxD_byTBMiXYkLnY0JmhiLp8X1DLB7Z-1Q4Yd5Slleg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/maxmobility/Downloads/IMG_20230323_114707.jpg"
+						},
+						{
+							"key": "tenantId",
+							"value": "ac5g5624",
+							"type": "text"
+						},
+						{
+							"key": "Pkjobid",
+							"value": "73",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8085/api/users/saveMediafile"
+			},
+			"response": []
+		},
+		{
+			"name": "PRE_REGISTRATION_SEND_OTP",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZmRAZ21haWwuY29tIiwiZXhwIjoxNjg5MzMwMzQwLCJpYXQiOjE2ODkzMTIzNDB9.0cgMYzirraStEbwV5zVxqIl-8eaNm9HRN19AtR91cVwgtd103zSkqjSOchxwwUPgRSBeTIoCe-EdbHWVT0smNA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n {\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\", \"deviceType\": \"IOS\", \"appVersion\": \"1.0.0\", \"userId\": \"9898989898\", \"emailId\": \"johnscoachin@gmail.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/preregistrationSendOtp"
+			},
+			"response": []
+		}
+	]
+}

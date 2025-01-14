@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "57268d33-5a4a-4b27-b097-02409e59d2ba",
+		"name": "Bizfns-Staff_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "fetchStaffList",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MDkxOTgxMTIxIiwiZXhwIjoxNjkyOTA1NTcyLCJpYXQiOjE2OTI4NjIzNzJ9.OIHSj2ZpQZBIG0tJOjvGr5pWLgm9Cs0lK4EktRRF519VrLAw8b5CxCGTzF_asB72YpT32X6r85lvRS_Sg0lgjA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8521479630\",\r\n  \"tenantId\":\"maxm8203\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://182.156.196.67:8085/api/users/fetchStaffList"
+			},
+			"response": []
+		},
+		{
+			"name": "addStaff",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzE4Mzg2NTI4LCJpYXQiOjE3MTgzNDMzMjh9.c3HhVjJICwQsnWxW2TdWn8oWkW1FxdNNaC4kKKTQ_REMTFI9CP3qKqOl5QbgGSHAUsl48FV4PXNcZItvoKrBzQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyMjExNjAxLCJpYXQiOjE2OTIxNjg0MDF9.1_Iu0B6pWLPwNRdfjOGpalMq_TWwy7_9Vz63h1vLByyxHFOmh1V7pYOMfoFAGnFHukWpQ9k7Olz9WnddDiy6qw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"2555554885\",\r\n  \"tenantId\":\"hoxs3359\",\r\n  \"staffFirstName\":\"a'ks\",\r\n  \"staffLastName\":\"singh\",\r\n  \"staffEmail\": \"\",\r\n  \"staffMobile\":\"6529865465\",\r\n  \"staffType\":\"1\", \r\n  \"companyId\":\"275\",\r\n  \"chargeRate\":\"11\",\r\n  \"chargeFrequency\":\"11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addStaff"
+			},
+			"response": []
+		},
+		{
+			"name": "staffrecurrValidation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGFzdGg5NDczIiwiZXhwIjoxNzE2MzEyMzgyLCJpYXQiOjE3MTYyNjkxODJ9.sQuYYzgvSPpvC3D58Rz3-kVJ4Fap_Q7qb7oV9QZwcmW5d51FEdUORIHsX9LN_xpovJLSigz0dB4q_h_xr6UoMw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNzAwODQ2Mjk1LCJpYXQiOjE3MDA4MDMwOTV9.qIoURy4DtbEd2reRTVmNPOlAB2uYvAETQEaEPD6mKerrtgya2J7KsqUKlE3UB96iHeEFA-6ljhTLCYgPWiPFdA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2024-05-21\",\r\n    \"endDate\": \"2024-05-21\",\r\n    \"tenantId\": \"asth9473\",\r\n    \"staffId\": [\r\n        \"5\",\r\n        \"4\",\r\n        \"3\"\r\n    ],\r\n    \"currentRecurrDate\": [\r\n        {\r\n            \"startTime\": \"2024-05-21 13:00\",\r\n            \"endTime\": \"2024-05-21 14:00\"\r\n        },\r\n        {\r\n            \"startTime\": \"2024-05-22 13:00\",\r\n            \"endTime\": \"2024-05-22 14:00\"\r\n        }\r\n    ],\r\n    \"jobId\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/staffvalidateRecurrDate"
+			},
+			"response": []
+		},
+		{
+			"name": "staffUserLogin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTc3Nzc3LGh1emE2MTQ3IiwiZXhwIjoxNzEyMTY0NjMxLCJpYXQiOjE3MTIxMjE0MzF9.5qQvj-CH3839JxfoU5qYroLgW9bITOAY-OyMSpEc9Uh3Gd0PZKOsyHrtJNgpSO4i0mRxNkrPV7pFga7Qwngr7g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":\"1111177756\",\r\n\"temporaryPassword\":\"CUgcl$xv\",\r\n\"newPassword\":\"Abcd@123\",\r\n\"tenantId\":\"huza6147\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/staffUserLogin"
+			},
+			"response": []
+		},
+		{
+			"name": "getActiveStatusForStaff",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"staffPhoneNumber\": \"2555554885\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getActiveStatusForStaff"
+			},
+			"response": []
+		},
+		{
+			"name": "updateActiveInactiveStatusForStaff",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"staffPhoneNumber\": \"2555554885\",\r\n    \"staffActiveInactiveStatus\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateActiveInactiveStatusForStaff"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStaff",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"staffPhoneNumber\": \"6529865464\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/deleteStaff"
+			},
+			"response": []
+		},
+		{
+			"name": "getStaffDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"staffPhoneNumber\": \"2555554885\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getStaffDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "updateStaffDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"staffPhoneNumber\": \"2555554885\",\r\n    \"staffFirstName\": \"Jim\",\r\n    \"staffLastName\": \"Jenny\",\r\n    \"staffEmail\": \"jim@gmail.com\",\r\n    \"staffMobile\": \"\",\r\n    \"staffType\": \"1\",\r\n    \"companyId\": \"675\",\r\n    \"chargeRate\": \"21\",\r\n    \"chargeFrequency\": \"3\",\r\n    \"StaffActiveStatus\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateStaffDetails"
+			},
+			"response": []
+		}
+	]
+}

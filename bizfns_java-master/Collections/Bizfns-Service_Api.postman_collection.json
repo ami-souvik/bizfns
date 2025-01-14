@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "153d444c-ff94-42d1-9c3e-1a26b7497480",
+		"name": "Bizfns-Service_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "addService",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGFzdGg0MjYxIiwiZXhwIjoxNzE1ODg0NjI0LCJpYXQiOjE3MTU4NDE0MjR9.lPogu2yCWP4PEwelhQRk3rEGbzXoQBX8EUtVRTFLYV9d2kDrNjd5EGJ2InXHoAa1ARQ7rqqLxIgFar6AVmm2Bw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyNzI3ODc0LCJpYXQiOjE2OTI2ODQ2NzR9.f3iFToRHZMBXfJ8D9qFex1YCorpmx4SNyJd-dZB7-H-5wllA6uAWjCI2MgNdz_hMpF3AuBmmWmF7X4o3-RvCNA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111188888\",\r\n  \"tenantId\":\"asth4261\",\r\n  \"serviceName\":\"'s\",\r\n  \"rate\":\"1\",\r\n  \"rateUnit\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addService"
+			},
+			"response": []
+		},
+		{
+			"name": "fetchServiceRateUnit",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyOTAzNDkyLCJpYXQiOjE2OTI4NjAyOTJ9.ek4YDiLk884sGpFpTG3hyJ96e3S54xeOqehz51Qd8xcD6DTlC6-K5U6SgnUkUiybs3MtxeDdIaDwkAzytFN2ew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"test\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://182.156.196.67:8085/api/users/fetchServiceRateUnit"
+			},
+			"response": []
+		},
+		{
+			"name": "fetchServiceList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzMzM0Njc0LCJpYXQiOjE2OTMyOTE0NzR9.hMwCWpezII8fCU3Klp8MDXV9c2qBr54Sif95mhYIBEMAz4LP9g1BS-A4o1DDEYmDkmfzgPKS5SMyiuy0kzvrfw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111155555\",\r\n  \"tenantId\":\"hoxs3359\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/fetchServiceList"
+			},
+			"response": []
+		},
+		{
+			"name": "serviceEntityField",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNjk5ODk0ODg1LCJpYXQiOjE2OTk4NTE2ODV9.xsUYx-c-_6LVxcHxoQaeCeoqziCOF9hGQePG_r3c-0HYLYrxKvpnPGNDVWM3MD86aY1NGiMSX72_OPV97Ed-rQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\n\t\"deviceType\": \"IOS\",\n\t\"appVersion\": \"1.0.0\",\n\t\"userId\": \"8910569212\",\n\t\"tenantId\": \"ac5g5624\",\n    \"compId\":\"60\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/serviceEntityField"
+			},
+			"response": []
+		},
+		{
+			"name": "getServiceEntityDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwODEyMjY5LCJpYXQiOjE3MjA3NjkwNjl9.2NLp2Wmq6VDpnezdMb5MrXaaBTJnqQaWsH2ZhulWHDNkMFKseVNjnYaVOgtMfMZXmSernZUzPEDWXG4VjdFDzQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNzAxMjc3ODIwLCJpYXQiOjE3MDEyMzQ2MjB9.bpDyA_Q4kuuOIycDe8MRlvGH4fZrModKsDbl94dWDelmCb-r4Qq1RZVzSBhYTppxkYWNMZQqsHo6YUnEHRgcuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\n\t\"deviceType\": \"IOS\",\n\t\"appVersion\": \"1.0.0\",\n\t\"userId\": \"1111155555\",\n\t\"tenantId\": \"hoxs3359\",\n    \"customer_id\":\"4\",\n    \"service_entity_id\":\"4\",\n    \"compId\":\"215\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getServiceEntityDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteServiceObject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNzIxMDc5LCJpYXQiOjE3MjA2Nzc4Nzl9.fzY3yCoo6ILoAOI4fZ3w1SmiSrU28AxdHTLvFdSY-W14HQkczZkfOmEqGGH6S2LfnCHpjf6MoqVk_aKXnNxO8g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"\",\r\n    \"appVersion\": \"\",\r\n    \"userId\": \"1111155555\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"customer_id\": \"\",\r\n    \"service_entity_id\": \"1\",\r\n    \"compId\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/deleteServiceObject"
+			},
+			"response": []
+		},
+		{
+			"name": "updateServiceObjectDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwODMwNTE2LCJpYXQiOjE3MjA3ODczMTZ9.NNwunh_l3TxStD7LyaXHZhH6cFXp-5uupv64VU_fCOwDEIj4mwWWPlTQfUz2xOenFYCLV0yL2wh44Fbil72Ryg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\r\n    \"deviceType\": \"IOS\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"userId\": \"1111155555\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"customer_id\": \"5\",\r\n    \"service_Entity_Id\": \"9\",\r\n    \"service_entity_items\": [\r\n        {\r\n            \"question_id\": \"5\",\r\n            \"question_name\": \"Name\",\r\n            \"answer\": \"Rohit\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"6\",\r\n            \"question_name\": \"Phone Number\",\r\n            \"answer\": \"8569536265\",\r\n            \"answer_type_id\": \"7\"\r\n        },\r\n        {\r\n            \"question_id\": \"7\",\r\n            \"question_name\": \"Age\",\r\n            \"answer\": \"26\",\r\n            \"answer_type_id\": \"2\"\r\n        },\r\n        {\r\n            \"question_id\": \"8\",\r\n            \"question_name\": \"Gender\",\r\n            \"answer\": \"Male\",\r\n            \"answer_type_id\": \"4\"\r\n        },\r\n        {\r\n            \"question_id\": \"14\",\r\n            \"question_name\": \"Preference\",\r\n            \"answer\": \"Preference NA\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"15\",\r\n            \"question_name\": \"Skill-Level\",\r\n            \"answer\": \"Sr Manager\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"17\",\r\n            \"question_name\": \"Problems\",\r\n            \"answer\": \"Not a fresh stocks\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"18\",\r\n            \"question_name\": \"History\",\r\n            \"answer\": \"Yet to create\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"19\",\r\n            \"question_name\": \"General Notes\",\r\n            \"answer\": \"Focus and Focus\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"12\",\r\n            \"question_name\": \"Test/Choice\",\r\n            \"answer\": \"Test\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"13\",\r\n            \"question_name\": \"Style\",\r\n            \"answer\": \"Unique\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"10\",\r\n            \"question_name\": \"Weight\",\r\n            \"answer\": \"65\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"11\",\r\n            \"question_name\": \"Height\",\r\n            \"answer\": \"5.9\",\r\n            \"answer_type_id\": \"4\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateServiceObjectDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "getActiveInactiveStatusForService",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"serviceId\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getActiveInactiveStatusForService"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateActiveInactiveStatusForService",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"status\":\"0\",\r\n    \"serviceId\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/UpdateActiveInactiveStatusForService"
+			},
+			"response": []
+		},
+		{
+			"name": "getServiceDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"\",\r\n    \"appVersion\": \"1.0\",\r\n    \"userId\": \"1111155555\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"serviceId\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getServiceDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "updateServiceDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyOTY1MzE1LCJpYXQiOjE3MjI5MjIxMTV9.G0x1ZBEbRA0GzMa3hRI8tWG6vTHTDoncZ9DZ1zV1SRCUQ2BspgSnMqaq4pYAnajeGuLs8ExJVfg9R8a3JHLc_A"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"\",\r\n    \"appVersion\": \"1.0\",\r\n    \"userId\": \"1111155555\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"serviceId\": \"5\",\r\n    \"serviceName\": \"Bike Wash\",\r\n    \"rate\": \"295\",\r\n    \"rateUnit\": \"2\",\r\n    \"status\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateServiceDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteService",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"serviceId\": \"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/deleteService"
+			},
+			"response": []
+		}
+	]
+}

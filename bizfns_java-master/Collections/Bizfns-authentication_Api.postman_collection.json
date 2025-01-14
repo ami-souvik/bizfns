@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "55161d60-68ab-4f48-8439-9c1972dd5444",
+		"name": "Bizfns-authentication_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "userlogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1111155555\",\r\n    \"password\": \"Pranta@123\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"fcmId\": \"\",\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"Android/IOS/WEB\",\r\n    \"appVersion\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/userlogin"
+			},
+			"response": [
+				{
+					"name": "userlogin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"7987645295\",\r\n    \"password\":\"Abcd@1234\",\r\n      \"tenantId\":\"\",\r\n  \"fcmId\":\"\",\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"Android/IOS/WEB\",\r\n  \"appVersion\":\"\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/api/users/userlogin"
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "otpVerification",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OTg4Nzc2NjU1IiwiZXhwIjoxNjg5NTk2ODE3LCJpYXQiOjE2ODk1Nzg4MTd9.kAjdmtEJqJeZxsA0kNvAK-wn98YnJxwXOwTcUnM9wtKQVlNGIOfOEJmombyf8KNJ9-LhaoYEcng1y9PjgQN1-g",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\": \"289114\",\r\n    \"userId\": \"1111155555\",\r\n    \"otpTimeStampe\": \"1689580427074.013000\",\r\n    \"tenantId\": \"hoxs3359\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/otpVerification"
+			},
+			"response": []
+		},
+		{
+			"name": "resetPassword",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWFubWF4QGdtYWlsLmNvbSIsImV4cCI6MTY4OTc2OTU4MCwiaWF0IjoxNjg5NzUxNTgwfQ.p2rqSpwjR4H16gTnsHEkRlOpm-E7Zw--2QTH2Z_2acZN7nujJMQ61EeJxEo4lEG4xFMDt9s3j-DdpPKuLpZuaQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"9091981107\",\r\n  \"tenantId\":\"hdhc3623\",\r\n    \"newPassword\":\"Abcd@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/resetPassword"
+			},
+			"response": []
+		},
+		{
+			"name": "validateOtpAndChangePassword",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGEzY2E2NjY4IiwiZXhwIjoxNzEyMDAyNzcyLCJpYXQiOjE3MTE5NTk1NzJ9.eeRfZBFXx2GvWTn1L03jQTKjdSRJ0J502xS8jfkJIrPi1K3cRRChNYLW3rc36dl2zzY2rX72u_c1KrtJA2VvNw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MDkxOTgxMTA3LGhkaGMzNjIzc3QiLCJleHAiOjE2OTIwMzcxNTQsImlhdCI6MTY5MTk5Mzk1NH0.0Z1iU3kMHrNKkfHaJwTDwJkJ8D-2mWmbRhbaXjJzqcsp78C-OIuQ5NHx4PXsy9jrvY67hXH5ZEffL2X-csr1dQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1111155555\",\r\n    \"tenantId\": \"a2ca3743\",\r\n    \"otp\": \"892979\",\r\n    \"otpTimeStamp\": \"null\",\r\n    \"newPassword\": \"Abcd@1234\",\r\n    \"deviceId\": \"d6f7ac97c61b2b62\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/validateOtpAndChangePassword"
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyNzI3ODc0LCJpYXQiOjE2OTI2ODQ2NzR9.f3iFToRHZMBXfJ8D9qFex1YCorpmx4SNyJd-dZB7-H-5wllA6uAWjCI2MgNdz_hMpF3AuBmmWmF7X4o3-RvCNA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"142\",\r\n  \"tenantId\":\"ttg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/forgotPassword"
+			},
+			"response": []
+		},
+		{
+			"name": "validateForgotPasswordOtp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWFubWF4QGdtYWlsLmNvbSIsImV4cCI6MTY4OTc2OTU4MCwiaWF0IjoxNjg5NzUxNTgwfQ.p2rqSpwjR4H16gTnsHEkRlOpm-E7Zw--2QTH2Z_2acZN7nujJMQ61EeJxEo4lEG4xFMDt9s3j-DdpPKuLpZuaQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"9091981121\",\r\n  \"tenantId\":\"maxm8203\",\r\n    \"otp\":\"157369\",\r\n  \"otpTimeStamp\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/validateForgotPasswordOtp"
+			},
+			"response": []
+		},
+		{
+			"name": "validateOtpUpdateBusinessEmail",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzOTM2MzU2LCJpYXQiOjE2OTM4OTMxNTZ9.4XQgtcFh-wAu1SEeTPLvsBTEYXoVAdaZKWFBzTrjhmVRMUrtBy0-VRfX-T-fe9D2YC3UWkTF8h2mWzaTJ6YpCg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8547693215\",\r\n  \"companyId\":\"179\",\r\n  \"currentEmail\":\"\",\r\n  \"newEmail\":\"abcd\",\r\n  \"otp\":\"\",\r\n  \"otpTimeStamp\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/validateOtpUpdateBusinessEmail"
+			},
+			"response": []
+		},
+		{
+			"name": "changePasswordSendOtp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTc3Nzc3LGh1emE2MTQ3IiwiZXhwIjoxNzEyMTY0NjMxLCJpYXQiOjE3MTIxMjE0MzF9.5qQvj-CH3839JxfoU5qYroLgW9bITOAY-OyMSpEc9Uh3Gd0PZKOsyHrtJNgpSO4i0mRxNkrPV7pFga7Qwngr7g"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"7333256988\",\r\n  \"oldPassword\":\"Pranta@123\",\r\n  \"tenantId\":\"huza6147\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/changePasswordSendOtp"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BizfnsBaseURL",
+			"value": "http://182.156.196.67:8085/api"
+		},
+		{
+			"key": "tokenvalue",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NTU1NTExMTExLGFtaXQxMDI1IiwiZXhwIjoxNzE0Njg2NTU1LCJpYXQiOjE3MTQ2NDMzNTV9.bzayxXroJFDXw9DvXJLDFnDU7fk_gDTMX6AFuXiOJc2Tfx52IjttvGMshD1SUD6WRegkfJI7BzY5KxROQQ6i9w"
+		}
+	]
+}

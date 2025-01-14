@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "86ec7daf-fdf2-45e2-90f3-d853680bffa9",
+		"name": "Bizfns-Schedule_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "addNewSchedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyNTM0NDAxLCJpYXQiOjE3MjI0OTEyMDF9.kjSvgC8HZ0KNFQEH5tRoMYVqbjeDnXoFo_vHX1yMffY6kb4bDQNEraIN8k0oA3jwfVDcCCs7yhxGNLdgLR7MGg"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3ODQ1NjYyMjk5IiwiZXhwIjoxNzEwMTc4MzI5LCJpYXQiOjE3MTAxMzUxMjl9.ZEPNEoPVSVKwy3Rc00Sk5jtXu7hWhaUJJucbSWve_P6njZDdCsgCMZ0zOpyPq4Qx1RoicfoypL08uN9vPdCAOw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"1d17ce84a34e805e\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"userId\": \"2555554885\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"job_id\": \"\",\r\n    \"jobDetails\": {\r\n        \"startDate\": \"2024-06-14\",\r\n        \"startTime\": \"10:00\",\r\n        \"endDate\": \"2024-06-14\",\r\n        \"endTime\": \"11:00\",\r\n        \"jobstopdate\": \"\",\r\n        \"imageId\": \"\",\r\n        \"customer\": [],\r\n        \"staffList\": [\r\n            {\r\n                \"staffId\": \"4\"\r\n            },{\r\n                \"staffId\": \"3\"\r\n            }\r\n        ],\r\n        \"service\": {\r\n            \"serviceId\":\"2\"\r\n        },\r\n        \"paymentModeId\": \"\",\r\n        \"paymentTypeId\": \"\",\r\n        \"materials\": \"\",\r\n        \"note\": \"\",\r\n        \"attachments\": [],\r\n        \"DurationOfrecurr\": \"1\",\r\n        \"Numberofrecurr\": \"1\",\r\n        \"recurrType\": \"Day\",\r\n        \"weekNumber\": \"0\",\r\n        \"jobstatus\": \"0\",\r\n        \"joblocation\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addNewSchedule"
+			},
+			"response": []
+		},
+		{
+			"name": "preNewScheduleData",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzMjQ1NDc2LCJpYXQiOjE2OTMyMDIyNzZ9.3Yf-Z9U2sYnpSg-l7TTSLja2lpg1fhATA96RakJ0zFjYyHq-lydj1OIvJnklZ5B_Qxg9TRlPSHahQ29oduAjEQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8910569212\",\r\n\"tenantId\":\"ac5g5624\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/preNewScheduleData"
+			},
+			"response": []
+		},
+		{
+			"name": "savescheduleInterval",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNjk3MTQ4Nzg4LCJpYXQiOjE2OTcxMDU1ODh9.g-4iTRQkMwAyJTc9DtF5E9GEXv4xuzk_Aj0xSEpn0qaTMjf5WP_MmcBLsoVbdnyA2bVTBVSYpyq7p6eO0X76Fg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"810\",\r\n    \"tenantId\": \"ac5g5624\",\r\n    \"deviceId\": \"d6f7ac97c61b2b62\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"start_time\": \" 12:39\",\r\n    \"end_time\": \"21:39\",\r\n    \"interval\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/saveTimeInterval"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSchedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzE4Mzg2NTI4LCJpYXQiOjE3MTgzNDMzMjh9.c3HhVjJICwQsnWxW2TdWn8oWkW1FxdNNaC4kKKTQ_REMTFI9CP3qKqOl5QbgGSHAUsl48FV4PXNcZItvoKrBzQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk1NDAzNjMwLCJpYXQiOjE2OTUzNjA0MzB9.Gxx9ISZnSj7ry3hWVPdCc8W0G6W2DxsweQTL3xMQ5al55mLK2sBQv-f1E_7wlJTcs80QkKiZIR1fa5VFgMCzQA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"2555554885\",\r\n  \"tenantId\":\"hoxs3359\",\r\n  \"jobId\":\"87\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/deleteSchedule"
+			},
+			"response": []
+		},
+		{
+			"name": "scheduleList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzIyNTM0OTk2LCJpYXQiOjE3MjI0OTE3OTZ9.NqJzM3JaHIwivw3pAw0_Zpe1yMYJMejulI1BZLxt_x3UJ8KZ8JhZnnf1aUR_GTmgaIQkQbRe92lGn47kdbPLmQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk1MjM1Njk0LCJpYXQiOjE2OTUxOTI0OTR9.afmOG_8N1Ze3mklVetQ18H04eeHIL5ehOgHON3BuHyBgANW9Eo-F96HOd_CnfaBZszSv3NhpN-NmnMTJCanYtg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"2555554885\",\r\n    \"fromDate\": \"2024-06-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/scheduleList"
+			},
+			"response": [
+				{
+					"name": "scheduleList",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3ODQ1NjYyMjk5IiwiZXhwIjoxNzA5MjI3OTUxLCJpYXQiOjE3MDkxODQ3NTF9.ahtjQFskvb0DPVgzPzwO01ElWxaawT4ymFPuwny3pzAB9tIiTP-FnLBvs43j849ZNwyvRvBtzuIcvK6SJyLqgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceId\": \"A44FE8C2-C922-4112-8EAF-87D5FE94DCB9\",\r\n    \"deviceType\": \"IOS\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"tenantId\": \"agni2803\",\r\n    \"userId\": \"2222222222\",\r\n    \"fromDate\": \"2024-02-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/api/users/scheduleList"
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 07:24:03 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"schedule\": [],\n            \"time\": \"07:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"08:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"09:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"10:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"11:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"12:00:00\"\n        },\n        {\n            \"schedule\": [\n                {\n                    \"JOB_LOCATION\": null,\n                    \"JOB_START_TIME\": \"13:00:00\",\n                    \"JOB_STATUS\": \"0\",\n                    \"JOB_NOTES\": \"this job for test purpose\",\n                    \"JOB_MATERIAL\": \"\",\n                    \"endDate\": \"2024-02-27\",\n                    \"JOB_END_TIME\": \"14:00:00\",\n                    \"serviceList\": [\n                        {\n                            \"ID\": 1,\n                            \"SERVICE_NAME\": \"service_demo1\"\n                        }\n                    ],\n                    \"StaffList\": [\n                        {\n                            \"PK_USER_ID\": 1,\n                            \"USER_FIRST_NAME\": \"ag\",\n                            \"USER_LAST_NAME\": \"bs\"\n                        }\n                    ],\n                    \"PK_JOB_ID\": \"2\",\n                    \"startDate\": \"2024-02-27\"\n                }\n            ],\n            \"time\": \"13:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"14:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"15:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"16:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"17:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"18:00:00\"\n        },\n        {\n            \"schedule\": [\n                {\n                    \"JOB_LOCATION\": null,\n                    \"JOB_START_TIME\": \"19:00:00\",\n                    \"JOB_STATUS\": \"0\",\n                    \"JOB_NOTES\": \"this job for test purpose\",\n                    \"JOB_MATERIAL\": \"\",\n                    \"endDate\": \"2024-02-27\",\n                    \"JOB_END_TIME\": \"20:00:00\",\n                    \"serviceList\": [\n                        {\n                            \"ID\": 1,\n                            \"SERVICE_NAME\": \"service_demo1\"\n                        }\n                    ],\n                    \"StaffList\": [\n                        {\n                            \"PK_USER_ID\": 1,\n                            \"USER_FIRST_NAME\": \"ag\",\n                            \"USER_LAST_NAME\": \"bs\"\n                        }\n                    ],\n                    \"PK_JOB_ID\": \"1\",\n                    \"startDate\": \"2024-02-27\"\n                }\n            ],\n            \"time\": \"19:00:00\"\n        },\n        {\n            \"schedule\": [],\n            \"time\": \"20:00:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "scheduleHistory",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkzNDE4MjAxLCJpYXQiOjE2OTMzNzUwMDF9.WPSvYcJ-XEs4MuKAihErYVQy0EPimncP7rstampyckiTLK9dzZOMZgoVSDCGVK3RtQnpTUQ31C-dlzTVmDD6iA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"8910569212\",\r\n  \"tenantId\":\"ac5g5624\",\r\n  \"fromDate\":\"\",\r\n\"toDate\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/scheduleHistory"
+			},
+			"response": []
+		},
+		{
+			"name": "reScheduleJob",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGFzdGg0MjYxIiwiZXhwIjoxNzE1ODg0NjI0LCJpYXQiOjE3MTU4NDE0MjR9.lPogu2yCWP4PEwelhQRk3rEGbzXoQBX8EUtVRTFLYV9d2kDrNjd5EGJ2InXHoAa1ARQ7rqqLxIgFar6AVmm2Bw"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjk1MjM1Njk0LCJpYXQiOjE2OTUxOTI0OTR9.afmOG_8N1Ze3mklVetQ18H04eeHIL5ehOgHON3BuHyBgANW9Eo-F96HOd_CnfaBZszSv3NhpN-NmnMTJCanYtg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"\",\r\n  \"tenantId\":\"asth4261\",\r\n   \"jobId\":\"38\",\r\n  \"reScheduleDate\":\"2024-05-21\",\r\n  \"startTime\":\"14:00:00\",\r\n  \"endTime\":\"15:00:00\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/reScheduleJob"
+			},
+			"response": []
+		},
+		{
+			"name": "editSchedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzIyNjE4NjEyLCJpYXQiOjE3MjI1NzU0MTJ9.Rw52CtF6PU50AMS976HyRcuPHlEVjiRu2LfpsYjjTaX8iO82xoGHa4zc135v_dpsfyrkz3dzFBF2eEbxNj3CUA"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNzAxNDUzMDIzLCJpYXQiOjE3MDE0MDk4MjN9.I-t2nFiQ_hTK7uKDNd33ItUxLyYEU5SdtPMRmyEy7iaLngmB6y2Gh2w4FRB1MaDyoBvxxy7d25vBIaJN-BmX4g"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"deviceId\": \"d4fdfd8165c84f27\",\n    \"deviceType\": \"ANDROID\",\n    \"appVersion\": \"1.0.0\",\n    \"userId\": \"2555554885\",\n    \"tenantId\": \"hoxs3359\",\n    \"job_id\": \"108\",\n    \"jobDetails\": {\n        \"startDate\": \"2024-06-24\",\n        \"startTime\": \"08:00\",\n        \"endDate\": \"2024-06-24\",\n        \"endTime\": \"09:00\",\n        \"jobstopdate\": \"\",\n        \"imageId\": \"image-1810441020\",\n        \"customer\": [],\n        \"staffList\": [\n            {\n                \"staffId\": \"3\"\n            },\n            {\n                \"staffId\": \"4\"\n            }\n        ],\n        \"service\": {\n            \"serviceId\": \"2\"\n        },\n        \"paymentModeId\": \"\",\n        \"paymentTypeId\": \"\",\n        \"materials\": \"\",\n        \"note\": \"\",\n        \"attachments\": [],\n        \"DurationOfrecurr\": \"1\",\n        \"Numberofrecurr\": \"1\",\n        \"recurrType\": \"Day\",\n        \"weekNumber\": \"0\",\n        \"jobstatus\": \"0\",\n        \"joblocation\": \"\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/editSchedule"
+			},
+			"response": []
+		},
+		{
+			"name": "getRecurrDate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1IiwiZXhwIjoxNzExNDczNzc4LCJpYXQiOjE3MTE0MzA1Nzh9.Fxg8HM6kQ0UOb8V2KBB9pgly8ebsWV8Juil8b0kRnBOWXtlVu6us2ufSX8JC8X_kLVl2FREFcr6ef644oNR09w"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNzAxNDUzMDIzLCJpYXQiOjE3MDE0MDk4MjN9.I-t2nFiQ_hTK7uKDNd33ItUxLyYEU5SdtPMRmyEy7iaLngmB6y2Gh2w4FRB1MaDyoBvxxy7d25vBIaJN-BmX4g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"startDate\": \"2024-03-28\",\r\n  \"startTime\": \"09:00\",\r\n  \"endDate\": \"2024-03-28\",\r\n  \"endTime\": \"10:00\",\r\n  \"jobstopdate\": \"\",\r\n  \"DurationOfrecurr\": \"1\",\r\n  \"Numberofrecurr\": \"5\",\r\n  \"recurrType\": \"Day\",\r\n  \"weekNumber\": \"0\",\r\n  \"tanentId\": \"clea1206\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getRecurrdate"
+			},
+			"response": []
+		},
+		{
+			"name": "saveTimeSheet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzIyNjE4NjEyLCJpYXQiOjE3MjI1NzU0MTJ9.Rw52CtF6PU50AMS976HyRcuPHlEVjiRu2LfpsYjjTaX8iO82xoGHa4zc135v_dpsfyrkz3dzFBF2eEbxNj3CUA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"timesheetBillNo\": \"TSB12345\",\r\n  \"weekNumber\": 2,\r\n  \"weekStartDate\": \"2024-07-11\",\r\n  \"weekEndDate\": \"2024-07-17\",\r\n  \"timeSheetStatus\": \"Approved\",\r\n  \"staffId\": 1,\r\n  \"isExempt\": false,\r\n  \"entries\": [\r\n    {\r\n      \"dayOfWeek\": \"Monday\",\r\n      \"dateOfWeek\": \"2024-07-11\",\r\n      \"jobEvents\": [\"Job Id 1\", \"Job Id 2\"],\r\n      \"regularHour\": 8.00,\r\n      \"overtimeHour\": 2.00\r\n    },\r\n    {\r\n      \"dayOfWeek\": \"Tuesday\",\r\n      \"dateOfWeek\": \"2024-07-12\",\r\n      \"jobEvents\": [\"Job Id 3\", \"Job Id 4\"],\r\n      \"regularHour\": 8.00,\r\n      \"overtimeHour\": 0.00\r\n    },\r\n    {\r\n      \"dayOfWeek\": \"Wednesday\",\r\n      \"dateOfWeek\": \"2024-07-13\",\r\n      \"jobEvents\": [\"Job Id 5\"],\r\n      \"regularHour\": 8.00,\r\n      \"overtimeHour\": 1.00\r\n    },\r\n    {\r\n      \"dayOfWeek\": \"Thursday\",\r\n      \"dateOfWeek\": \"2024-07-14\",\r\n      \"jobEvents\": [\"Job Id 6\"],\r\n      \"regularHour\": 8.00,\r\n      \"overtimeHour\": 0.00\r\n    },\r\n    {\r\n      \"dayOfWeek\": \"Friday\",\r\n      \"dateOfWeek\": \"2024-07-15\",\r\n      \"jobEvents\": [\"Job Id 7\"],\r\n      \"regularHour\": 8.00,\r\n      \"overtimeHour\": 1.00\r\n    },\r\n    {\r\n      \"dayOfWeek\": \"Saturday\",\r\n      \"dateOfWeek\": \"2024-07-16\",\r\n      \"jobEvents\": [\"Job Id 8\"],\r\n      \"regularHour\": 4.00,\r\n      \"overtimeHour\": 0.00\r\n    },\r\n    {\r\n      \"dayOfWeek\": \"Sunday\",\r\n      \"dateOfWeek\": \"2024-07-17\",\r\n      \"jobEvents\": [\"Job Id 9\"],\r\n      \"regularHour\": 4.00,\r\n      \"overtimeHour\": 0.00\r\n    }\r\n  ],\r\n  \"totalRegularHour\": 56.00,\r\n  \"totalOvertimeHour\": 4.00,\r\n  \"totalRegularCost\": 1680.00,\r\n  \"totalOvertimeCost\": 120.00,\r\n  \"totalPayableCost\": 1800.00\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/saveTimeSheet"
+			},
+			"response": []
+		},
+		{
+			"name": "updateTimeSheet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzIyNjE4NjEyLCJpYXQiOjE3MjI1NzU0MTJ9.Rw52CtF6PU50AMS976HyRcuPHlEVjiRu2LfpsYjjTaX8iO82xoGHa4zc135v_dpsfyrkz3dzFBF2eEbxNj3CUA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"timesheetId\": 1,\r\n  \"dayOfWeek\": \"Monday\",\r\n  \"dateOfWeek\": \"2024-07-11\",\r\n  \"jobEvents\": [\"Job Id 8\", \"Job Id 9\"],\r\n  \"regularHour\": 8.00,\r\n  \"overtimeHour\": 2.00,\r\n  \"timesheetBillNo\": \"TSB12345\",\r\n  \"weekNumber\": 2,\r\n  \"weekStartDate\": \"2024-07-11\",\r\n  \"weekEndDate\": \"2024-07-17\",\r\n  \"staffId\": 101,\r\n  \"isExempt\": false,\r\n  \"totalRegularHour\": 56.00,\r\n  \"totalOvertimeHour\": 4.00,\r\n  \"totalRegularCost\": 1680.00,\r\n  \"totalOvertimeCost\": 120.00,\r\n  \"totalPayableCost\": 1800.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateTimeSheet"
+			},
+			"response": []
+		},
+		{
+			"name": "getTimeSheetList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyNjM3NzMyLCJpYXQiOjE3MjI1OTQ1MzJ9.AilR1Ca99x0j83R-NsPBmPF7rm2pvlwsiw1MMTRth9lbp0ZvGs92aCyp_jkCIzYKmb3KS52Uhlfc0katFpgH4g"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\": \"1111155555\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"fromDate\": \"2024-07-10\",\r\n    \"toDate\": \"2024-07-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getTimeSheetList"
+			},
+			"response": []
+		},
+		{
+			"name": "TimeSheetbyBillNoAndStaffId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODgxMTcyLCJpYXQiOjE3MjI4Mzc5NzJ9.lQUZ_ZVgysb02-RO9viGEenTkD6jB2k17Z-SA4WXmknewtHkuQcNM8n5rHyrID9qMS-vOqkT0f4fBGC6erbLvQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"TenantId\": \"hoxs3359\",\r\n  \"billNo\": \"TSB12345\",\r\n  \"staffId\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/TimeSheetbyBillNoAndStaffId"
+			},
+			"response": []
+		}
+	]
+}

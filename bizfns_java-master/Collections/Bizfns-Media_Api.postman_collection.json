@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "5dd88099-132a-4afb-9eda-e0eec46eb7ee",
+		"name": "Bizfns-Media_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "SaveMediaFile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NTU1NTExMTExLGFtaXQxMDI1IiwiZXhwIjoxNzE0Njg2NTU1LCJpYXQiOjE3MTQ2NDMzNTV9.bzayxXroJFDXw9DvXJLDFnDU7fk_gDTMX6AFuXiOJc2Tfx52IjttvGMshD1SUD6WRegkfJI7BzY5KxROQQ6i9w"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNjk3NDc2NTg4LCJpYXQiOjE2OTc0MzMzODh9.pKMMBzAHv8E9WTCL4d39PxzujTkSKIdExNhs3D2YcH3dxD_byTBMiXYkLnY0JmhiLp8X1DLB7Z-1Q4Yd5Slleg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/test0008.jpg"
+						},
+						{
+							"key": "tenantId",
+							"value": "amit1025",
+							"type": "text"
+						},
+						{
+							"key": "Pkjobid",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8085/api/users/saveMediafile"
+			},
+			"response": []
+		},
+		{
+			"name": "getMediaFile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc2NTQzMjE1LGNsZWExMjA2IiwiZXhwIjoxNzEyMjU2NDUxLCJpYXQiOjE3MTIyMTMyNTF9.oMgoBUFucVse4qSokMZJo4st3Rmzc-2uNLM1o8GpbSEZ0nnl6a2Dx3k8g7FbU_1txxn081PydicMvNRG2DvK3Q"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNjk3MjE5NzU0LCJpYXQiOjE2OTcxNzY1NTR9.hLEMzQyd5a1DbNW8BbnZy4UPAlya1JiWd6bngZCa9cxxulVdM3bmmWmN1OmrMBHjXv6Pp1PzdlqjoD55K-_GUw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imageId\": \"image-1940364760\",\r\n    \"tenantId\": \"huza4176\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getMediafile"
+			},
+			"response": []
+		},
+		{
+			"name": "download_media_file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNjk3MjE5NzU0LCJpYXQiOjE2OTcxNzY1NTR9.hLEMzQyd5a1DbNW8BbnZy4UPAlya1JiWd6bngZCa9cxxulVdM3bmmWmN1OmrMBHjXv6Pp1PzdlqjoD55K-_GUw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"ac5g5624\",\r\n    \"pkJobId\": \"73\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/downloadMediafile/"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMediaFile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTg4ODg4LGF0aGwyODI0IiwiZXhwIjoxNzE0NjcxMjM4LCJpYXQiOjE3MTQ2MjgwMzh9.ObHarmrCX-kKxy0i6wNkcYHQ0E3w8w6kD71Ye9jUfiZQmp1IicKYpqCEHmQRVpg-SjNgdg8QOQMfdAW-tqEWvg"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZmRAZ21haWwuY29tIiwiZXhwIjoxNjg5MzMwMzQwLCJpYXQiOjE2ODkzMTIzNDB9.0cgMYzirraStEbwV5zVxqIl-8eaNm9HRN19AtR91cVwgtd103zSkqjSOchxwwUPgRSBeTIoCe-EdbHWVT0smNA",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"amit1025\",\r\n    \"mediaId\": \"image1992115037\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/deleteMediafile"
+			},
+			"response": []
+		}
+	]
+}

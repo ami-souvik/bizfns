@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "d3a0ab0b-2a43-4fca-acea-6e4f34a8accc",
+		"name": "Bizfns-Customer_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "addCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNTU1NTU0ODg1LGhveHMzMzU5IiwiZXhwIjoxNzE4Mzg2NTI4LCJpYXQiOjE3MTgzNDMzMjh9.c3HhVjJICwQsnWxW2TdWn8oWkW1FxdNNaC4kKKTQ_REMTFI9CP3qKqOl5QbgGSHAUsl48FV4PXNcZItvoKrBzQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZmRAZ21haWwuY29tIiwiZXhwIjoxNjg5MzMwMzQwLCJpYXQiOjE2ODkzMTIzNDB9.0cgMYzirraStEbwV5zVxqIl-8eaNm9HRN19AtR91cVwgtd103zSkqjSOchxwwUPgRSBeTIoCe-EdbHWVT0smNA",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\": \"34777130832c7991\",\r\n    \"deviceType\": \"ANDROID\",\r\n    \"appVersion\": \"1.0.0\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"custFName\": \"harry\",\r\n    \"custLName\": \"potter\",\r\n    \"custEmail\": \"\",\r\n    \"custPhNo\": \"5434563633\",\r\n    \"companyId\": \"346\",\r\n    \"questionData\": [\r\n        {\r\n            \"question_id\": \"5\",\r\n            \"question_name\": \"Name\",\r\n            \"answer\": \"b'jj\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"6\",\r\n            \"question_name\": \"Phone Number\",\r\n            \"answer\": \"1225423487\",\r\n            \"answer_type_id\": \"7\"\r\n        },\r\n        {\r\n            \"question_id\": \"7\",\r\n            \"question_name\": \"Age\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"2\"\r\n        },\r\n        {\r\n            \"question_id\": \"14\",\r\n            \"question_name\": \"Preference\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"15\",\r\n            \"question_name\": \"Skill-Level\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"17\",\r\n            \"question_name\": \"Problems\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"18\",\r\n            \"question_name\": \"History\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"19\",\r\n            \"question_name\": \"General Notes\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"12\",\r\n            \"question_name\": \"Test/Choice\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"13\",\r\n            \"question_name\": \"Style\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        },\r\n        {\r\n            \"question_id\": \"8\",\r\n            \"question_name\": \"Gender at birth\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"4\"\r\n        },\r\n        {\r\n            \"question_id\": \"11\",\r\n            \"question_name\": \"Height\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"4\"\r\n        },\r\n        {\r\n            \"question_id\": \"10\",\r\n            \"question_name\": \"Weight(Pound)\",\r\n            \"answer\": \"\",\r\n            \"answer_type_id\": \"1\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "fetchCustomerList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyOTg5MzcwLCJpYXQiOjE2OTI5NDYxNzB9.9isYjfusHBYUX20XDpVlUuyTfGUZJoSGhqBZ77rZSs1pH4dwNu4pR5WUKsdOPwHPmQR3sRy6r0ebA18i1Yok9w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111155555\",\r\n  \"tenantId\":\"hoxs3359\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/fetchCustomerList"
+			},
+			"response": []
+		},
+		{
+			"name": "custWiseServiceEntity",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNjk5ODk0ODg1LCJpYXQiOjE2OTk4NTE2ODV9.xsUYx-c-_6LVxcHxoQaeCeoqziCOF9hGQePG_r3c-0HYLYrxKvpnPGNDVWM3MD86aY1NGiMSX72_OPV97Ed-rQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\n\t\"deviceType\": \"IOS\",\n\t\"appVersion\": \"1.0.0\",\n\t\"userId\": \"8910569212\",\n\t\"tenantId\": \"ac5g5624\",\n    \"customer_id\":\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/custWiseServiceEntity"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SERVICE_ENTITY_DETAILS_customerId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4Mjc0ODQ2NzQ0IiwiZXhwIjoxNzAxMjc3ODIwLCJpYXQiOjE3MDEyMzQ2MjB9.bpDyA_Q4kuuOIycDe8MRlvGH4fZrModKsDbl94dWDelmCb-r4Qq1RZVzSBhYTppxkYWNMZQqsHo6YUnEHRgcuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\n\t\"deviceType\": \"IOS\",\n\t\"appVersion\": \"1.0.0\",\n\t\"userId\": \"8910569212\",\n\t\"tenantId\": \"kyse8094\",\n    \"customer_id\":\"2\",\n    \"service_entity_id\":\"1\",\n    \"compId\":\"215\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getServiceEntityDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "addCustomerAndServiceEnity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGEyY2EzNzQzIiwiZXhwIjoxNzExOTkzNzgxLCJpYXQiOjE3MTE5NTA1ODF9.j8puQ6xOkqxscjfQjieNKDfrOGuUqaDHz6tXH0MF8Zazmd9SMk9OPmKlYEViybTY4UzBgxdJagHiqUigJu7D5A"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODc1MzI0NTE4IiwiZXhwIjoxNzAzMDE4NjMzLCJpYXQiOjE3MDI5NzU0MzN9.rcanqvEd3ycr2Wj3oUjl8Z8pm3jDGomXbTYStrBmt3-F62ggUSm-gWtOL56GZAU3d_oePX0udmX67Eb0zQCpgg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deviceId\": \"0D19D918-DEA5-474B-B53F-8F787CF397F5\",\n\t\"deviceType\": \"IOS\",\n\t\"appVersion\": \"1.0.0\",\n\t\"userId\": \"1111155555\",\n\t\"tenantId\": \"a2ca3743\",\n    \"customer_id\":\"4\",\n   \"questionData\":[\n       {\n                    \"question_id\": \"5\",\n                    \"question_name\": \"Name\",\n                    \"answer\": \"Jay\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"6\",\n                    \"question_name\": \"Phone Number\",\n                    \"answer\": \"1212121212\",\n                    \"answer_type_id\": \"7\"\n                },\n                {\n                    \"question_id\": \"7\",\n                    \"question_name\": \"Age\",\n                    \"answer\": \"12\",\n                    \"answer_type_id\": \"2\"\n                },\n                {\n                    \"question_id\": \"8\",\n                    \"question_name\": \"Gender\",\n                    \"answer\": \"Male\",\n                    \"answer_type_id\": \"4\"\n                },\n                {\n                    \"question_id\": \"14\",\n                    \"question_name\": \"Preference\",\n                    \"answer\": \"Prf1\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"15\",\n                    \"question_name\": \"Skill-Level\",\n                    \"answer\": \"Skill1\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"17\",\n                    \"question_name\": \"Problems\",\n                    \"answer\": \"Prblm1\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"18\",\n                    \"question_name\": \"History\",\n                    \"answer\": \"Hist1\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"19\",\n                    \"question_name\": \"General Notes\",\n                    \"answer\": \"Notes\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"12\",\n                    \"question_name\": \"Test/Choice\",\n                    \"answer\": \"Test\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"13\",\n                    \"question_name\": \"Style\",\n                    \"answer\": \"Style\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"10\",\n                    \"question_name\": \"Weight\",\n                    \"answer\": \"60\",\n                    \"answer_type_id\": \"1\"\n                },\n                {\n                    \"question_id\": \"11\",\n                    \"question_name\": \"Height\",\n                    \"answer\": \"5.7\",\n                    \"answer_type_id\": \"4\"\n                }\n   ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/addServiceEntity"
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNjMzNDcxLCJpYXQiOjE3MjA1OTAyNzF9.mfiMZV8xDdpBlzFOVgdPgW6uCAlgznLk8w22vUK51Ak_LGItTaEnNK8GwUj84uFdtlhZmaGh42v388Q08RX-bw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"customerId\": \"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getCustomerDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomerDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNTU0Mzg3LCJpYXQiOjE3MjA1MTExODd9.vXLSxB0a1WK7SGraKY97DPxfNv3M_XTBL9OVpEyrvkoyzplI61bU-nVwlMCsMzur7lCMi8gTdvms-AzFWERR2Q"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"customerId\": \"4\",\r\n    \"firstName\": \"Ankit\",\r\n    \"lastName\": \"Doel\",\r\n    \"companyName\": \"My Hair Cut\",\r\n    \"address\" : \"Boring Road Dighwara\",\r\n    \"email\": \"ankit@gmail.com\",\r\n    \"customerPhone\": \"4585124621\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/updateCustomerDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIwNTU0Mzg3LCJpYXQiOjE3MjA1MTExODd9.vXLSxB0a1WK7SGraKY97DPxfNv3M_XTBL9OVpEyrvkoyzplI61bU-nVwlMCsMzur7lCMi8gTdvms-AzFWERR2Q"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"customerId\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "deleteCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "getActiveInactiveStatusForCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"customerId\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/getActiveInactiveStatusForCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateActiveInactiveStatusForCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExMTU1NTU1LGhveHMzMzU5IiwiZXhwIjoxNzIyODg3NTAwLCJpYXQiOjE3MjI4NDQzMDB9.ddRur5hRiKmRncTHs_oTCDDmXDlVG8lMpX1s4AVUDsVjnOwUBgzWaDGg0EkSxGPsTQlzBe6ofjGCi6D75i24AQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"userId\": \"1111155555\",\r\n    \"customerId\": \"2\",\r\n    \"status\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/UpdateActiveInactiveStatusForCustomer"
+			},
+			"response": []
+		}
+	]
+}

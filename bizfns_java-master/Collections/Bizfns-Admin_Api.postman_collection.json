@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "738902d5-fbfe-4798-9444-14e6714b0435",
+		"name": "Bizfns-Admin_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33449408"
+	},
+	"item": [
+		{
+			"name": "forgotPassword",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTIxNDc5NjMwIiwiZXhwIjoxNjkyNzI3ODc0LCJpYXQiOjE2OTI2ODQ2NzR9.f3iFToRHZMBXfJ8D9qFex1YCorpmx4SNyJd-dZB7-H-5wllA6uAWjCI2MgNdz_hMpF3AuBmmWmF7X4o3-RvCNA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"3333344444\",\r\n  \"tenantId\":\"huza4176\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/forgotPassword"
+			},
+			"response": []
+		},
+		{
+			"name": "userlogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//   \"userId\":\"6207943195\",\r\n//     \"password\":\"Abcd@123\",\r\n//       \"tenantId\":\"huze9619\",\r\n//   \"fcmId\":\"\",\r\n//   \"deviceId\":\"\",\r\n//   \"deviceType\":\"Android/IOS/WEB\",\r\n//   \"appVersion\":\"\"\r\n// }\r\n{\r\n    \"userId\": \"1111155555\",\r\n    \"password\": \"Pranta@123\",\r\n    \"tenantId\": \"hoxs3359\",\r\n    \"fcmId\": \"\",\r\n    \"deviceId\": \"\",\r\n    \"deviceType\": \"Android/IOS/WEB\",\r\n    \"appVersion\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/userlogin"
+			},
+			"response": [
+				{
+					"name": "userloginWithEmail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"mdhuzefa09@gmail.com\",\r\n    \"password\":\"Abcd@123\",\r\n      \"tenantId\":\"\",\r\n  \"fcmId\":\"\",\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"Android/IOS/WEB\",\r\n  \"appVersion\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/api/users/userlogin"
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Mar 2024 09:36:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"otp_message\": \"We have sent you verification code on md****************om\",\n        \"otp\": 235357,\n        \"otpTimeStamp\": \"1710927360102.213000\"\n    }\n}"
+				},
+				{
+					"name": "userloginWithNumber",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"7987645295\",\r\n    \"password\":\"Abcd@123\",\r\n      \"tenantId\":\"\",\r\n  \"fcmId\":\"\",\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"Android/IOS/WEB\",\r\n  \"appVersion\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/api/users/userlogin"
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Mar 2024 09:36:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"otp_message\": \"We have sent you verification code on 79******95\",\n        \"otp\": 212804,\n        \"otpTimeStamp\": \"1710927408140.990000\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "otpVerification",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OTg4Nzc2NjU1IiwiZXhwIjoxNjg5NTk2ODE3LCJpYXQiOjE2ODk1Nzg4MTd9.kAjdmtEJqJeZxsA0kNvAK-wn98YnJxwXOwTcUnM9wtKQVlNGIOfOEJmombyf8KNJ9-LhaoYEcng1y9PjgQN1-g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\": \"267985\",\r\n    \"userId\": \"1111155555\",\r\n    \"otpTimeStampe\": \"1711018909742.287000\",\r\n    \"tenantId\": \"hoxs3359\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8085/api/users/otpVerification"
+			},
+			"response": []
+		},
+		{
+			"name": "clientList",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://182.156.196.67:8085/api/users/clientList",
+					"protocol": "http",
+					"host": [
+						"182",
+						"156",
+						"196",
+						"67"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"clientList"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "50",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClientListByCompanyBusinessName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4NTQ3NjkzMjEwIiwiZXhwIjoxNzEwMTc4NDc3LCJpYXQiOjE3MTAxMzUyNzd9.QQqovvfBktdDUVn6uppw6-uNKkPEgqMssbgmjPdG2Rrv5bKJZeicHNNISHJRjj4AmO1_hCWmO7LaOKYdWZWVig"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/users/getClientListByCompanyBusinessName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"getClientListByCompanyBusinessName"
+					],
+					"query": [
+						{
+							"key": "businessName",
+							"value": "trsxf",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getListByCompanyBusinessName",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/users/getClientListByCompanyBusinessName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"users",
+								"getClientListByCompanyBusinessName"
+							],
+							"query": [
+								{
+									"key": "businessName",
+									"value": "trsxf",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Mar 2024 11:08:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563555525\",\n            \"COMPANY_BACKUP_EMAIL\": \"asd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563555526\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563555528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasgd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563556528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasfgd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563566528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasfugd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9463566528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gaswfugd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9093566528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gafugd@gmail.com\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "getClientListByCompanyBusinessName",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/users/getClientListByCompanyBusinessName?businessName=trsxf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"users",
+								"getClientListByCompanyBusinessName"
+							],
+							"query": [
+								{
+									"key": "businessName",
+									"value": "trsxf"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Mar 2024 11:09:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563555525\",\n            \"COMPANY_BACKUP_EMAIL\": \"asd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563555526\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563555528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasgd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563556528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasfgd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9563566528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gasfugd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9463566528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gaswfugd@gmail.com\"\n        },\n        {\n            \"COMPANY_BACKUP_PHONE_NUMBER\": \"9093566528\",\n            \"COMPANY_BACKUP_EMAIL\": \"gafugd@gmail.com\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "getListOfCompanyBusinessName",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/users/getClientListByCompanyBusinessName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"users",
+								"getClientListByCompanyBusinessName"
+							],
+							"query": [
+								{
+									"key": "businessName",
+									"value": "trsxf",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Mar 2024 11:10:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"companyBusinessName\": [\n            \"Test Max\",\n            \"DumbleDoor\",\n            \"dddd\",\n            \"maxitc\",\n            \"bestbuy\",\n            \"Soumyadip max\",\n            \"Bizfnsnumber3\",\n            \"axis\",\n            \"itcinfo\",\n            \"biztest\",\n            \"rewq\",\n            \"trsxf\",\n            \"Demo Company\",\n            \"saya medicine\",\n            \"Max\",\n            \"test\",\n            \"Sankha Da Business\",\n            \"Ashok2LLC\",\n            \"koushik\",\n            \"medical\",\n            \"DumbleDoor8\",\n            \"B&J's Yoga Center#2\",\n            \"high\",\n            \"test b\",\n            \"DumbleDoor1\",\n            \"aqwe\",\n            \"saua\",\n            \"hchx\",\n            \"g*',..gkhg5\",\n            \"Test11shop\",\n            \"dg 5 gmail\",\n            \"ayanmax\",\n            \"Debu\",\n            \"Test\",\n            \"Enterprise Solution Inc\",\n            \"fdsa\",\n            \"Huzefa Ansari\",\n            \"greenplanet\",\n            \"ChatGpt Service\",\n            \"green sea\",\n            \"maxm\",\n            \"bvcx\",\n            \"poiu\",\n            \"B&P's #3 Co.\",\n            \"Test7shop\",\n            \"axiffs\",\n            \"KY Services' #$&👨\\u200d🎓16\",\n            \"trew\",\n            \"Jays4store\",\n            \"Samuel Coaching\",\n            \"test12shop#joe's\",\n            \"saya\",\n            \"tanu\",\n            \"tcsm\",\n            \"Johns Business 👨\\u200d🎓👨\\u200d🎓\",\n            \"pluz\",\n            \"test...\",\n            \"Dumble*Door#987 My 2 Biz\",\n            \"John's Tution\",\n            \"white sky\",\n            \"jhgf\",\n            \"Rahul Store\",\n            \"abcd4567\",\n            \"paul two co\",\n            \"My test\",\n            \"qwert\",\n            \"abcd\",\n            \"Agnic677\",\n            \"a g mail\",\n            \"sdfg\",\n            \"abfc\",\n            \"Max test @12345\",\n            \"test9shop\",\n            \"hfhcj\",\n            \"maximum\",\n            \"bhas\",\n            \"yuio\",\n            \"ShreyaTech\",\n            \"fgds\",\n            \"sjjnsjs\",\n            \"Pranta's Den\",\n            \"Ivan's Kitchen 2018\",\n            \"lkhj\",\n            \"Pranta's Store\",\n            \"dsaq\",\n            \"hdhc\",\n            \"ABC Company\",\n            \"NC 2 Mfg\",\n            \"test3shop\",\n            \"South 34 Company\",\n            \"agdfsdxiffs\",\n            \"mack\",\n            \"aqwett\",\n            \"treg\",\n            \"maxmob\",\n            \"fdtr\",\n            \"plus\",\n            \"fghj\",\n            \"test \",\n            \"gsggsg\",\n            \"Jays store\",\n            \"bete\",\n            \"PrantasTestshop\",\n            \"TestBiz\",\n            \"hite\",\n            \"John2Business\",\n            \"testttt\",\n            \"plkj\",\n            \"yttgg\",\n            \"reliance\",\n            \"asdf\",\n            \"Greenplanet\",\n            \"Ivan's Kitchen 2023\",\n            \"cufug\",\n            \"test2shop\",\n            \"ghyu\",\n            \"zxcv\",\n            \"ac 5 gmail\",\n            \"hvzvc\",\n            \"Medical Shop\",\n            \"test6shop\",\n            \"Retail\",\n            \"mnbv\",\n            \"testshop1\",\n            \"Bsiness\",\n            \"lopu\",\n            \"sadu\",\n            \"dv 5 gmail\",\n            \"bgty\",\n            \"gagah\",\n            \"Agnic8989\",\n            \"test2\",\n            \"agxiffs\",\n            \"sayan\",\n            \"WB Grill's No.2#Biz\",\n            \"tapan\",\n            \"hshsh\",\n            \"Paul New Business \",\n            \"test10shop\",\n            \"bizfns1234\",\n            \"Tets8shop\",\n            \"tiyi\",\n            \"mamma's boy\",\n            \"sauo\",\n            \"Britt's 2nd Location#2.com\",\n            \"Richie's #2 Tutoring\",\n            \"DumbleDoor5\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "setPasswordAfterValidation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWFubWF4QGdtYWlsLmNvbSIsImV4cCI6MTY4OTc2OTU4MCwiaWF0IjoxNjg5NzUxNTgwfQ.p2rqSpwjR4H16gTnsHEkRlOpm-E7Zw--2QTH2Z_2acZN7nujJMQ61EeJxEo4lEG4xFMDt9s3j-DdpPKuLpZuaQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111155555\",\r\n  \"tenantId\":\"a3ca6668\",\r\n    \"newPassword\":\"Abcd@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/users/resetPassword?userType=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"resetPassword"
+					],
+					"query": [
+						{
+							"key": "userType",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validateForgotPasswordOtp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJheWFubWF4QGdtYWlsLmNvbSIsImV4cCI6MTY4OTc2OTU4MCwiaWF0IjoxNjg5NzUxNTgwfQ.p2rqSpwjR4H16gTnsHEkRlOpm-E7Zw--2QTH2Z_2acZN7nujJMQ61EeJxEo4lEG4xFMDt9s3j-DdpPKuLpZuaQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\":\"\",\r\n  \"deviceType\":\"\",\r\n  \"appVersion\":\"\",\r\n  \"userId\":\"1111155555\",\r\n  \"tenantId\":\"a3ca6668\",\r\n    \"otp\":\"941836\",\r\n  \"otpTimeStamp\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/users/validateForgotPasswordOtp?userType=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"validateForgotPasswordOtp"
+					],
+					"query": [
+						{
+							"key": "userType",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
